@@ -15,7 +15,6 @@ import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -95,13 +94,17 @@ public class TabActivity extends AppCompatActivity {
 
         toolbar=(Toolbar) activity.findViewById(R.id.tool_bar);
         new DrawerBuilder().withActivity(activity).build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.app_name);
-        SecondaryDrawerItem item2 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.app_name);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+        SecondaryDrawerItem item5 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
-                .withHeaderBackground(R.drawable.material_drawer_shadow_top)
+                .withHeaderBackground(R.drawable.drawer_header_bg_grey)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com").withIcon(R.drawable.material_drawer_circle_mask)
+                        new ProfileDrawerItem().withName("Material Mockups").withEmail("username@materialmockups.com").withIcon(R.drawable.drawer_circle)
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
@@ -116,11 +119,14 @@ public class TabActivity extends AppCompatActivity {
                 .withActivity(activity)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
+                .withSelectedItem(0)
                 .addDrawerItems(
                         item1,
-                        new DividerDrawerItem(),
                         item2,
-                        new SecondaryDrawerItem().withName(R.string.app_name)
+                        item3,
+                        new SecondaryDrawerItem().withName(R.string.subheader),
+                        item4,
+                        item5
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
