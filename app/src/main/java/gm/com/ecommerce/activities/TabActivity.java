@@ -17,7 +17,7 @@ import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
@@ -38,9 +38,8 @@ public class TabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
+
     public void tabCreate(){
         setContentView(R.layout.activity_tab);
         viewPager=(ViewPager)findViewById(R.id.viewpager);
@@ -53,9 +52,10 @@ public class TabActivity extends AppCompatActivity {
     private void setupViewPager(View viewpager)
     {
         ViewPagerAdapter adapter= new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addfrag(new onefragment(),"Bir");
-        adapter.addfrag(new twofragment(),"İki");
-        adapter.addfrag(new threefragment(),"Üç");
+        adapter.addfrag(new onefragment(),"Catagory");
+        adapter.addfrag(new twofragment(),"Catagory");
+        adapter.addfrag(new threefragment(),"Catagory");
+
         viewPager.setAdapter(adapter);
 
 
@@ -79,6 +79,7 @@ public class TabActivity extends AppCompatActivity {
         public int getCount() {
             return mFragmentlist.size();
         }
+
         public void addfrag(Fragment fragment,String title)
         {
             mFragmentlist.add(fragment);
@@ -90,15 +91,22 @@ public class TabActivity extends AppCompatActivity {
             return mFragmentTitlelist.get(position);
         }
     }
-    public void drawerCreate(Activity activity) {
-
+    public void drawerCreate(Activity activity,String toolbarTitle) {
+        final int[] positions = {1};
         toolbar=(Toolbar) activity.findViewById(R.id.tool_bar);
+
+        toolbar.setTitle(toolbarTitle);
         new DrawerBuilder().withActivity(activity).build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
-        SecondaryDrawerItem item4 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
-        SecondaryDrawerItem item5 = (SecondaryDrawerItem) new SecondaryDrawerItem().withIdentifier(2).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
+        final PrimaryDrawerItem item0 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
@@ -115,25 +123,91 @@ public class TabActivity extends AppCompatActivity {
 
                 })
                 .build();
-        Drawer result = new DrawerBuilder()
+        final Drawer result = new DrawerBuilder()
                 .withActivity(activity)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
                 .withSelectedItem(0)
+
                 .addDrawerItems(
+                        item0.withSelectedColor(0),
                         item1,
                         item2,
+                        new SectionDrawerItem().withName(R.string.subheader),
                         item3,
-                        new SecondaryDrawerItem().withName(R.string.subheader),
-                        item4,
-                        item5
+                        item4
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
+
+//                        positions[0] =position;
+//                          if(positions[0]==1)
+//                            {item0.withIcon(R.drawable.item_icon_dark);
+//                                item0.withName("değişti");
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//                            if(positions[0]==2)
+//                            {item1.withIcon(R.drawable.item_icon_dark);
+//                                item1.withName(R.string.menu_name_dark);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName("düzeldi");
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//                            if(positions[0]==3)
+//                            {item2.withIcon(R.drawable.item_icon_dark);
+//                                item2.withName("değişti");
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//
+//                            if(positions[0]==5)
+//                            {item3.withIcon(R.drawable.item_icon_dark);
+//                                item3.withName(R.string.menu_name_dark);
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);}
+//                            if(positions[0]==6)
+//                            {item4.withIcon(R.drawable.item_icon_dark);
+//                                item4.withName(R.string.menu_name_dark);
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);}
+
+
+
                         return false;}
                 })
+
                 .build();
     }
 }

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ECommerce</string>
     <string name="title_activity_tab">TabActivity</string>
-    <string  name="menu_name"><font fgcolor="#91969c">Menu item</font></string>
     <string  name="subheader"><font fgcolor="#c5c8cc">Subheader</font></string>
 </resources>
