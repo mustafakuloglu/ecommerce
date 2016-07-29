@@ -178,7 +178,7 @@
         android:id="@+id/checkBox"
         android:layout_below="@+id/underline4"
         android:layout_alignStart="@+id/underline4"
-        android:buttonTint="@color/colorAccent"
+        android:buttonTint="@color/button_red"
         android:checked="true"
         android:clickable="false"/>
 
@@ -202,7 +202,7 @@
         android:id="@+id/radioButton"
         android:layout_below="@+id/checkBox"
         android:layout_alignStart="@+id/checkBox"
-        android:buttonTint="@color/colorAccent"
+        android:buttonTint="@color/button_red"
         android:checked="true"
         android:clickable="false"/>
 
@@ -226,7 +226,8 @@
         android:layout_below="@id/radioButton"
         android:layout_marginLeft="12dp"
         android:backgroundTint="@color/menu_light"
-        android:textColor="@color/material_drawer_background"/>
+        android:textColor="@color/material_drawer_background"
+        android:layout_marginTop="98dp"/>
     <Button
         android:layout_width="160dp"
         android:layout_height="50dp"
@@ -235,5 +236,6 @@
         android:layout_below="@+id/radioButton2"
         android:layout_alignEnd="@+id/underline5"
         android:backgroundTint="@color/button_red"
-        android:textColor="@color/material_drawer_background"/>
+        android:textColor="@color/material_drawer_background"
+        android:layout_marginTop="98dp"/>
 </RelativeLayout>
