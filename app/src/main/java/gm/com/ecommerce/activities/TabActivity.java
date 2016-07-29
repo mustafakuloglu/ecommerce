@@ -141,7 +141,71 @@ public class TabActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                            return false;}
+
+//                        positions[0] =position;
+//                          if(positions[0]==1)
+//                            {item0.withIcon(R.drawable.item_icon_dark);
+//                                item0.withName("değişti");
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//                            if(positions[0]==2)
+//                            {item1.withIcon(R.drawable.item_icon_dark);
+//                                item1.withName(R.string.menu_name_dark);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName("düzeldi");
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//                            if(positions[0]==3)
+//                            {item2.withIcon(R.drawable.item_icon_dark);
+//                                item2.withName("değişti");
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);
+//                            }
+//
+//                            if(positions[0]==5)
+//                            {item3.withIcon(R.drawable.item_icon_dark);
+//                                item3.withName(R.string.menu_name_dark);
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);
+//                                item4.withIcon(R.drawable.item_icon);
+//                                item4.withName(R.string.menu_name);}
+//                            if(positions[0]==6)
+//                            {item4.withIcon(R.drawable.item_icon_dark);
+//                                item4.withName(R.string.menu_name_dark);
+//                                item1.withIcon(R.drawable.item_icon);
+//                                item1.withName(R.string.menu_name);
+//                                item2.withIcon(R.drawable.item_icon);
+//                                item2.withName(R.string.menu_name);
+//                                item3.withIcon(R.drawable.item_icon);
+//                                item3.withName(R.string.menu_name);
+//                                item0.withIcon(R.drawable.item_icon);
+//                                item0.withName(R.string.menu_name);}
+
+
+
+                        return false;}
                 })
 
                 .build();

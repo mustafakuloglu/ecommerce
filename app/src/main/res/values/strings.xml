@@ -2,6 +2,7 @@
     <string name="app_name">ECommerce</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="subheader"><font fgcolor="#c5c8cc">Subheader</font></string>
+    <string name="title_activity_category">Category</string>
     <string-array
         name="Weight">
         <item>option</item>
