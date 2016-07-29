@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -38,9 +40,17 @@ public class TabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        toolbar=(Toolbar)findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
     public void tabCreate(){
         setContentView(R.layout.activity_tab);
         viewPager=(ViewPager)findViewById(R.id.viewpager);
@@ -53,9 +63,9 @@ public class TabActivity extends AppCompatActivity {
     private void setupViewPager(View viewpager)
     {
         ViewPagerAdapter adapter= new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addfrag(new onefragment(),"Bir");
-        adapter.addfrag(new twofragment(),"İki");
-        adapter.addfrag(new threefragment(),"Üç");
+        adapter.addfrag(new onefragment(),"Catagory");
+        adapter.addfrag(new twofragment(),"Catagory");
+        adapter.addfrag(new threefragment(),"Catagory");
         viewPager.setAdapter(adapter);
 
 
@@ -93,6 +103,7 @@ public class TabActivity extends AppCompatActivity {
     public void drawerCreate(Activity activity) {
 
         toolbar=(Toolbar) activity.findViewById(R.id.tool_bar);
+        toolbar.setTitle("My Store");
         new DrawerBuilder().withActivity(activity).build();
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
         PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.menu_name).withIcon(R.drawable.item_icon);
