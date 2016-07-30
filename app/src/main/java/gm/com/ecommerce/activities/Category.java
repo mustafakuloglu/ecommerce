@@ -11,40 +11,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gm.com.ecommerce.R;
+import gm.com.ecommerce.adapters.MoviesAdapter;
+import gm.com.ecommerce.models.Movie;
+import gm.com.ecommerce.utils.DividerItemDecoration;
 
 public class Category extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Person> personList;
+    private List<Movie> movieList;
+    private MoviesAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         TabActivity tabActivity = new TabActivity();
-        tabActivity.drawerCreate(this,"Catagory");
-
+        tabActivity.drawerCreate(this,"Catagories");
+        mAdapter=new MoviesAdapter(movieList);
         recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-        layoutManager.scrollToPosition(0);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        personList=new ArrayList<Person>();
-        personList.add(new Person("Category","35 products",R.drawable.cloud));
-        personList.add(new Person("Category","12 products",R.drawable.cloud));
-        personList.add(new Person("Category","38 products",R.drawable.cloud));
-        personList.add(new Person("Category","147 products",R.drawable.cloud));
-        personList.add(new Person("Category","8 products",R.drawable.cloud));
-        personList.add(new Person("Category","29 products",R.drawable.cloud));
-        personList.add(new Person("Category","41 products",R.drawable.cloud));
-        personList.add(new Person("Category","2 products",R.drawable.cloud));
-        personList.add(new Person("Category","2 products",R.drawable.cloud));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
 
-        SimpleRecyclerAdapter adapter_items = new SimpleRecyclerAdapter(personList);
+        movieList =new ArrayList<Movie>();
+        movieList.add(new Movie("Category","35 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","12 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","38 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","147 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","8 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","29 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","41 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","2 products",R.drawable.cloud));
+        movieList.add(new Movie("Category","2 products",R.drawable.cloud));
+
+        MoviesAdapter adapter_items = new MoviesAdapter(movieList);
 
         recyclerView.setHasFixedSize(true);
-
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.setAdapter(mAdapter);
         recyclerView.setAdapter(adapter_items);
-
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
 
         recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
 
