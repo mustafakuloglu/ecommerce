@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gm.com.ecommerce.activities.Activity15">
+    tools:context=".activities.ActivityJ">
     <include
         android:id="@+id/tool_bar"
         layout="@layout/actiontool_bar" />

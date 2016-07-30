@@ -1,6 +1,7 @@
 package gm.com.ecommerce.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -34,6 +35,7 @@ public class TabActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     Toolbar toolbar;
+    Activity activity=new Activity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +93,8 @@ public class TabActivity extends AppCompatActivity {
             return mFragmentTitlelist.get(position);
         }
     }
-    public void drawerCreate(Activity activity,String toolbarTitle) {
+    public void drawerCreate(final Activity activity, String toolbarTitle) {
+        this.activity=activity;
         final int[] positions = {1};
         toolbar=(Toolbar) activity.findViewById(R.id.tool_bar);
 
@@ -99,13 +102,13 @@ public class TabActivity extends AppCompatActivity {
         new DrawerBuilder().withActivity(activity).build();
         final PrimaryDrawerItem item0 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(2).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(3).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(4).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(1).withName("Menu item").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(5).withName("Activity J").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
@@ -141,73 +144,13 @@ public class TabActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-
-//                        positions[0] =position;
-//                          if(positions[0]==1)
-//                            {item0.withIcon(R.drawable.item_icon_dark);
-//                                item0.withName("değişti");
-//                                item1.withIcon(R.drawable.item_icon);
-//                                item1.withName(R.string.menu_name);
-//                                item2.withIcon(R.drawable.item_icon);
-//                                item2.withName(R.string.menu_name);
-//                                item3.withIcon(R.drawable.item_icon);
-//                                item3.withName(R.string.menu_name);
-//                                item4.withIcon(R.drawable.item_icon);
-//                                item4.withName(R.string.menu_name);
-//                            }
-//                            if(positions[0]==2)
-//                            {item1.withIcon(R.drawable.item_icon_dark);
-//                                item1.withName(R.string.menu_name_dark);
-//                                item0.withIcon(R.drawable.item_icon);
-//                                item0.withName("düzeldi");
-//                                item2.withIcon(R.drawable.item_icon);
-//                                item2.withName(R.string.menu_name);
-//                                item3.withIcon(R.drawable.item_icon);
-//                                item3.withName(R.string.menu_name);
-//                                item4.withIcon(R.drawable.item_icon);
-//                                item4.withName(R.string.menu_name);
-//                            }
-//                            if(positions[0]==3)
-//                            {item2.withIcon(R.drawable.item_icon_dark);
-//                                item2.withName("değişti");
-//                                item1.withIcon(R.drawable.item_icon);
-//                                item1.withName(R.string.menu_name);
-//                                item0.withIcon(R.drawable.item_icon);
-//                                item0.withName(R.string.menu_name);
-//                                item3.withIcon(R.drawable.item_icon);
-//                                item3.withName(R.string.menu_name);
-//                                item4.withIcon(R.drawable.item_icon);
-//                                item4.withName(R.string.menu_name);
-//                            }
-//
-//                            if(positions[0]==5)
-//                            {item3.withIcon(R.drawable.item_icon_dark);
-//                                item3.withName(R.string.menu_name_dark);
-//                                item1.withIcon(R.drawable.item_icon);
-//                                item1.withName(R.string.menu_name);
-//                                item2.withIcon(R.drawable.item_icon);
-//                                item2.withName(R.string.menu_name);
-//                                item0.withIcon(R.drawable.item_icon);
-//                                item0.withName(R.string.menu_name);
-//                                item4.withIcon(R.drawable.item_icon);
-//                                item4.withName(R.string.menu_name);}
-//                            if(positions[0]==6)
-//                            {item4.withIcon(R.drawable.item_icon_dark);
-//                                item4.withName(R.string.menu_name_dark);
-//                                item1.withIcon(R.drawable.item_icon);
-//                                item1.withName(R.string.menu_name);
-//                                item2.withIcon(R.drawable.item_icon);
-//                                item2.withName(R.string.menu_name);
-//                                item3.withIcon(R.drawable.item_icon);
-//                                item3.withName(R.string.menu_name);
-//                                item0.withIcon(R.drawable.item_icon);
-//                                item0.withName(R.string.menu_name);}
-
-
-
-                        return false;}
+if(drawerItem.getIdentifier()==5)
+{ Intent main=new Intent(activity,ActivityJ.class);
+    activity.startActivity(main);}
+                    return false;}
                 })
 
                 .build();
     }
+
 }

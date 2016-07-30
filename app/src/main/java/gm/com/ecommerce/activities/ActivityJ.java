@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import gm.com.ecommerce.R;
 
-public class Activity15 extends AppCompatActivity {
+public class ActivityJ extends AppCompatActivity {
 TabActivity tabActivity;
     ImageView shop,search;
     @Override
