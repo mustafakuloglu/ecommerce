@@ -11,6 +11,9 @@ public class Movie {
     private int photo_id;
     public List<Movie> movie_list;
 
+
+
+
     public String getName() {
         return name;
     }

@@ -14,6 +14,8 @@ import gm.com.ecommerce.models.Movie;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
 
+
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView person_name;

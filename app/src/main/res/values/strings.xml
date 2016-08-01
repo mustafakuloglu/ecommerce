@@ -6,4 +6,5 @@
     <string-array name="Weight">
         <item>option</item>
     </string-array>
+    <string name="title_activity_activity_m">ActivityM</string>
 </resources>

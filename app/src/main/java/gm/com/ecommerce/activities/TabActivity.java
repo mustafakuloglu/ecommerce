@@ -106,11 +106,14 @@ public class TabActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(3).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(4).withName("Activity E").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem itemE = new PrimaryDrawerItem().withIdentifier(4).withName("Activity E").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(5).withName("Activity J").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem itemJ = new PrimaryDrawerItem().withIdentifier(5).withName("Activity J").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-
+        final PrimaryDrawerItem itemI = new PrimaryDrawerItem().withIdentifier(6).withName("Activity I").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(7).withName("Activity M").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.drawer_header_bg_grey)
@@ -137,8 +140,10 @@ public class TabActivity extends AppCompatActivity {
                         item1,
                         item2,
                         new SectionDrawerItem().withName(R.string.subheader),
-                        item3,
-                        item4
+                        itemE,
+                        itemI,
+                        itemJ,
+                        itemM
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -149,6 +154,12 @@ public class TabActivity extends AppCompatActivity {
                             activity.startActivity(main);}
                         if(drawerItem.getIdentifier()==5)
                         { Intent main=new Intent(activity,ActivityJ.class);
+                            activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==6)
+                        { Intent main=new Intent(activity,ActivityI.class);
+                            activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==7)
+                        { Intent main=new Intent(activity,ActivityM.class);
                             activity.startActivity(main);}
                     return false;}
                 })
