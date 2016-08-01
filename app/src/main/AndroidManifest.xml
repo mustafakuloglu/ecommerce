@@ -19,11 +19,18 @@
             android:name=".activities.TabActivity"
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activities.ActivityJ"
             android:label="@string/title_activity_category"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.ActivityI"
+            android:label="@string/title_activity_category"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.ActivityE"
+            android:label="@string/title_activity_category"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

@@ -106,7 +106,7 @@ public class TabActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(3).withName("Menu item").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(4).withName("Menu item").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(4).withName("Activity E").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(5).withName("Activity J").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
@@ -144,9 +144,12 @@ public class TabActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-if(drawerItem.getIdentifier()==5)
-{ Intent main=new Intent(activity,ActivityJ.class);
-    activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==4)
+                        { Intent main=new Intent(activity,ActivityE.class);
+                            activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==5)
+                        { Intent main=new Intent(activity,ActivityJ.class);
+                            activity.startActivity(main);}
                     return false;}
                 })
 
