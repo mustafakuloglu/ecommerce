@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.adapters.ActivityEAdaper;
+import gm.com.ecommerce.adapters.ActivityEAdapter;
 import gm.com.ecommerce.models.Person;
 
 public class ActivityE extends AppCompatActivity {
@@ -50,7 +50,7 @@ public class ActivityE extends AppCompatActivity {
         item_list.add(new Person("Category", "18 products", R.drawable.lanscape_icon));
 
 
-        ActivityEAdaper adapter_items = new ActivityEAdaper(item_list);
+        ActivityEAdapter adapter_items = new ActivityEAdapter(item_list);
 
         recycler_view.setHasFixedSize(true);
 

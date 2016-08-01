@@ -1,5 +1,9 @@
 package gm.com.ecommerce.adapters;
 
+/**
+ * Created by musta on 1.08.2016.
+ */
+
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,7 +20,7 @@ import gm.com.ecommerce.models.Person;
 /**
  * Created by musta on 1.08.2016.
  */
-public class ActivityEAdaper extends RecyclerView.Adapter<ActivityEAdaper.ViewHolder> {
+public class ActivityCAdapter extends RecyclerView.Adapter<ActivityCAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView person_name;
@@ -36,16 +40,16 @@ public class ActivityEAdaper extends RecyclerView.Adapter<ActivityEAdaper.ViewHo
         }
     }
     List<Person> list_person;
-    public ActivityEAdaper(List<Person> list_person) {
+    public ActivityCAdapter(List<Person> list_person) {
 
         this.list_person = list_person;
     }
 
 
     @Override
-    public ActivityEAdaper.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ActivityCAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activiyt_e_card, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_e_card, parent, false);
 
         ViewHolder view_holder = new ViewHolder(v);
         return view_holder;
@@ -55,8 +59,8 @@ public class ActivityEAdaper extends RecyclerView.Adapter<ActivityEAdaper.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.person_name.setText(list_person.get(position).getName());
-        holder.person_age.setText(list_person.get(position).getAge());
+        holder.person_name.setText(list_person.get(position).getTitle());
+        holder.person_age.setText(list_person.get(position).getText());
         holder.person_img.setImageResource(list_person.get(position).getPhoto_id());
 
     }

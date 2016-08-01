@@ -11,7 +11,7 @@ public class MainActivity extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TabActivity tabActivity=new TabActivity();
-        tabCreate();
+        tabCreate(null,null,null);
         tabActivity.drawerCreate(this,"My Store");
 
 

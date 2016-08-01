@@ -5,27 +5,27 @@ package gm.com.ecommerce.models;
  */
 public class Person {
 
-    private String name;
-    private String age;
+    private String title;
+    private String text;
     private int photo_id;
 
-    public String getName()
+    public String getTitle()
     {
-        return this.name;
+        return this.title;
     }
-    public String getAge()
+    public String getText()
     {
-        return this.age;
+        return this.text;
     }
     public int getPhoto_id()
     {
         return this.photo_id;
     }
 
-    public Person(String name,String age,int photo_id)
+    public Person(String title, String text, int photo_id)
     {
-        this.name = name;
-        this.age = age;
+        this.title = title;
+        this.text = text;
         this.photo_id = photo_id;
     }
     public Person()
