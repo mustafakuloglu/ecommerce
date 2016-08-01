@@ -28,9 +28,4 @@ public class Movie {
         this.products=products;
         this.photo_id=photo_id;
     }
-public Movie()
-{
-
-}
-
 }
