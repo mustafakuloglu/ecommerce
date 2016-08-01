@@ -36,6 +36,7 @@
             android:name=".activities.ActivityM"
             android:label="@string/title_activity_category"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activities.ActivityN"></activity>
     </application>
 
 </manifest>

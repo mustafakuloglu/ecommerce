@@ -27,6 +27,7 @@
             android:background="@color/activity_e_bg"
 
 
+
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -37,7 +38,7 @@
                 android:textSize="15sp"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/menu_light"
-                android:gravity="left"
+                android:layout_toEndOf="@id/item_big_title"
 
                 />
             <TextView
@@ -45,12 +46,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item_big_title_right"
                 android:text="VIEW ALL"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="275dp"
                 android:textSize="15sp"
-                android:layout_marginTop="8dp"
                 android:textColor="@color/menu_light"
-                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
 
                 />
         <RelativeLayout
@@ -61,6 +60,7 @@
             android:layout_gravity="top"
             android:background="@color/md_white_1000"
             android:elevation="1dp"
+            android:id="@+id/rl1"
             >
             <ImageView
                 android:layout_width="80dp"
@@ -77,20 +77,20 @@
 
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:id="@+id/item_icon"
                 android:layout_marginLeft="38dp"
                 android:layout_marginTop="38dp"
                 android:layout_marginBottom="38dp"
-                android:layout_marginRight="280dp"
+                android:layout_alignParentLeft="true"
 
                 />
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:id="@+id/item_menu"
-                android:layout_marginLeft="316dp"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_more_vert_black_24dp"
 
@@ -103,7 +103,8 @@
                 android:id="@+id/item_title"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="98dp"
+                android:layout_toRightOf="@id/item_icon1"
+                android:layout_marginLeft="10dp"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/md_black_1000"
@@ -115,7 +116,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item_text"
                 android:layout_below="@+id/item_title"
-                android:layout_marginLeft="98dp"
+                android:layout_toRightOf="@id/item_icon1"
+                android:layout_marginLeft="10dp"
                 android:textColor="@color/menu_light"
 
                 />
@@ -124,10 +126,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item_price"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="304dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
                 android:textSize="15sp"
-                android:text="$100"
                 android:textStyle="bold"
                 android:textColor="@color/button_red"
 
@@ -147,7 +148,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="94dp"
-            android:layout_marginTop="144dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/rl1"
             android:layout_marginBottom="4dp"
             android:layout_gravity="top"
             android:background="@color/md_white_1000"
@@ -168,20 +170,20 @@
 
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:id="@+id/item_icon2"
                 android:layout_marginLeft="38dp"
                 android:layout_marginTop="38dp"
                 android:layout_marginBottom="38dp"
-                android:layout_marginRight="280dp"
+                android:layout_alignParentLeft="true"
 
                 />
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:id="@+id/item_menu2"
-                android:layout_marginLeft="316dp"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_more_vert_black_24dp"
 
@@ -194,7 +196,8 @@
                 android:id="@+id/item_title2"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="98dp"
+                android:layout_toRightOf="@id/item_icon3"
+                android:layout_marginLeft="10dp"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/md_black_1000"
@@ -206,7 +209,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item_text2"
                 android:layout_below="@+id/item_title2"
-                android:layout_marginLeft="98dp"
+                android:layout_toRightOf="@id/item_icon3"
+                android:layout_marginLeft="10dp"
                 android:textColor="@color/menu_light"
 
                 />
@@ -215,10 +219,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/item_price2"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="304dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
                 android:textSize="15sp"
-                android:text="$100"
                 android:textStyle="bold"
                 android:textColor="@color/button_red"
 
@@ -233,7 +236,6 @@
                 android:scaleX="0.4"
                 android:scaleY="0.4"
                 android:progressTint="@color/menu_light"/>
-
 
         </RelativeLayout>
         </RelativeLayout>
