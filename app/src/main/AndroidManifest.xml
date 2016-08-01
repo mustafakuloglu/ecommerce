@@ -24,6 +24,10 @@
             android:name=".activities.ActivityJ"
             android:label="@string/title_activity_category"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activities.ActivityI"
+            android:label="@string/title_activity_category"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
