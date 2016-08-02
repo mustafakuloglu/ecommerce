@@ -133,9 +133,10 @@ public class TabActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem itemN = new PrimaryDrawerItem().withIdentifier(9).withName("Activity N").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-        final PrimaryDrawerItem itemA = new PrimaryDrawerItem().withIdentifier(10).withName("Activity A").withIcon(R.drawable.item_icon)
+        final PrimaryDrawerItem itemB = new PrimaryDrawerItem().withIdentifier(10).withName("Activity B").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
-
+        final PrimaryDrawerItem itemD = new PrimaryDrawerItem().withIdentifier(11).withName("Activity D").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.drawer_header_bg_grey)
@@ -162,7 +163,6 @@ public class TabActivity extends AppCompatActivity {
                         item1,
                         item2,
                         new SectionDrawerItem().withName(R.string.subheader),
-                        itemA,
                         itemC,
                         itemE,
                         itemI,
@@ -193,7 +193,10 @@ public class TabActivity extends AppCompatActivity {
                         { Intent main=new Intent(activity,ActivityN.class);
                             activity.startActivity(main);}
                         if(drawerItem.getIdentifier()==10)
-                        { Intent main=new Intent(activity,ActivityA.class);
+                        { Intent main=new Intent(activity,ActivityB.class);
+                            activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==11)
+                        { Intent main=new Intent(activity,ActivityD.class);
                             activity.startActivity(main);}
                     return false;}
                 })
