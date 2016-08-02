@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+         android:layout_gravity="top"
+        android:background="@color/md_white_1000"
+        android:elevation="1dp"
+        android:id="@+id/rl1n"
+        android:layout_marginBottom="1dp"
+        >
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/item_icon1n"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/menu_light"
+            />
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/item_iconn"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="38dp"
+            android:layout_alignParentLeft="true"
+
+            />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/item_menun"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_more_vert_black_24dp"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_titlen"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/item_icon1n"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_black_1000"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_textn"
+            android:layout_below="@+id/item_titlen"
+            android:layout_toRightOf="@id/item_icon1n"
+android:layout_marginBottom="4dp"
+            android:layout_toLeftOf="@id/item_menun"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/menu_light"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_pricen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_red"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBarn"
+            android:layout_marginTop="54dp"
+            android:layout_marginLeft="20dp"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:progressTint="@color/menu_light"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -49,7 +49,7 @@ public class ActivityNAdapter extends RecyclerView.Adapter<ActivityNAdapter.View
     @Override
     public ActivityNAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_c_card, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.n_recyleview, parent, false);
 
         ViewHolder view_holder = new ViewHolder(v);
         return view_holder;
@@ -59,7 +59,7 @@ public class ActivityNAdapter extends RecyclerView.Adapter<ActivityNAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-      //  holder.item_title.setText(list_item.get(position).getTitle());
+        holder.item_title.setText(list_item.get(position).getTitle());
         holder.item_text.setText(list_item.get(position).getText());
         holder.item_icon.setImageResource(list_item.get(position).getPhoto_id());
         holder.item_price.setText(list_item.get(position).getPrice());
