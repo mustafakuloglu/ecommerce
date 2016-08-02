@@ -52,7 +52,8 @@ public class ActivityE extends AppCompatActivity {
 
         ActivityEAdapter adapter_items = new ActivityEAdapter(item_list);
 
-        recycler_view.setHasFixedSize(true);
+        recycler_view.setHasFixedSize(false);
+        recycler_view.setHorizontalScrollBarEnabled(true);
 
         recycler_view.setAdapter(adapter_items);
 

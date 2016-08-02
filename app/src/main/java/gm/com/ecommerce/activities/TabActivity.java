@@ -133,6 +133,8 @@ public class TabActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem itemN = new PrimaryDrawerItem().withIdentifier(9).withName("Activity N").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem itemA = new PrimaryDrawerItem().withIdentifier(10).withName("Activity A").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
@@ -160,6 +162,7 @@ public class TabActivity extends AppCompatActivity {
                         item1,
                         item2,
                         new SectionDrawerItem().withName(R.string.subheader),
+                        itemA,
                         itemC,
                         itemE,
                         itemI,
@@ -188,6 +191,9 @@ public class TabActivity extends AppCompatActivity {
                             activity.startActivity(main);}
                         if(drawerItem.getIdentifier()==9)
                         { Intent main=new Intent(activity,ActivityN.class);
+                            activity.startActivity(main);}
+                        if(drawerItem.getIdentifier()==10)
+                        { Intent main=new Intent(activity,ActivityA.class);
                             activity.startActivity(main);}
                     return false;}
                 })

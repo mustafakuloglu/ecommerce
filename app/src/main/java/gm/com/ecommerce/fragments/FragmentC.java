@@ -23,7 +23,7 @@ import gm.com.ecommerce.models.ItemDouble;
 public class FragmentC extends Fragment {
     private RecyclerView recycler_view;
     private List<ItemDouble> item_list;
-    public FragmentC(){}
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
