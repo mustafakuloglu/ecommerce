@@ -37,7 +37,6 @@ public class FragmantCadapter extends RecyclerView.Adapter<FragmantCadapter.View
         public ViewHolder(View view) {
             super(view);
 
-            card_view = (CardView)view.findViewById(R.id.fragment_c_card_view);
             item_title = (TextView)view.findViewById(R.id.item_title);
             item_text = (TextView)view.findViewById(R.id.item_text);
             item_icon = (ImageView)view.findViewById(R.id.item_icon);

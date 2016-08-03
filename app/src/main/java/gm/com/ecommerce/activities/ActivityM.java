@@ -15,7 +15,6 @@ import java.util.List;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.BasketAdapter;
 import gm.com.ecommerce.models.MovieBasket;
-import gm.com.ecommerce.utils.DividerItemDecoration;
 
 public class ActivityM extends AppCompatActivity {
     TabActivity tabActivity;
@@ -52,7 +51,6 @@ public class ActivityM extends AppCompatActivity {
         BasketAdapter adapter_items = new BasketAdapter(movieList);
 
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
         recyclerView.setAdapter(adapter_items);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

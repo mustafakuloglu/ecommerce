@@ -163,6 +163,7 @@ public class TabActivity extends AppCompatActivity {
                         item1,
                         item2,
                         new SectionDrawerItem().withName(R.string.subheader),
+                        itemB,
                         itemC,
                         itemE,
                         itemI,
@@ -174,6 +175,7 @@ public class TabActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
+                        activity.finish();
                         if(drawerItem.getIdentifier()==4)
                         { Intent main=new Intent(activity,ActivityE.class);
                             activity.startActivity(main);}

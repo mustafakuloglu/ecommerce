@@ -7,7 +7,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:padding="5dp"
+            android:background="@color/md_white_1000"
+            android:elevation="0.3dp"
+            android:layout_marginBottom="1dp">
+
 
             <ImageView
                 android:layout_width="50dp"
@@ -25,6 +29,7 @@
                 android:layout_toRightOf="@+id/person_photo"
                 android:layout_alignParentTop="true"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:paddingTop="15dp"
                 android:paddingLeft="7dp"
                 />
@@ -38,9 +43,6 @@
                 android:textSize="12sp"
                 android:textColor="@android:color/darker_gray"
                 android:paddingTop="18dp"
-
-
                 />
-
         </RelativeLayout>
 </LinearLayout>

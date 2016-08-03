@@ -13,8 +13,7 @@
         android:background="@color/activity_e_bg"
         >
 
-
-            <RelativeLayout
+        <RelativeLayout
         android:layout_width="165dp"
         android:layout_height="270dp"
         android:layout_marginLeft="10dp"
