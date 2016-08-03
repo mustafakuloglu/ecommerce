@@ -17,14 +17,14 @@ import gm.com.ecommerce.models.Item;
 public class ActivityN extends AppCompatActivity {
     private RecyclerView recycler_view;
     private List<Item> item_list;
-    TabActivity tabActivity;
+    BaseActivity baseActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_n);
-        tabActivity=new TabActivity();
-        tabActivity.drawerCreate(this,"Category");
-        tabActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        baseActivity =new BaseActivity();
+        baseActivity.drawerCreate(this,"Category");
+        baseActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         recycler_view = (RecyclerView)findViewById(R.id.recycler_viewn);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -34,24 +34,24 @@ public class ActivityN extends AppCompatActivity {
 
         item_list = new ArrayList<Item>();
 
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",4f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",1f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",0f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",4f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",1f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",0f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",4f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",1f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new Item("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",0f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",4f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",1f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",0f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",4f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",1f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",0f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",4f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",1f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new Item("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",0f));
 
         ActivityNAdapter adapter_items = new ActivityNAdapter(item_list);
 

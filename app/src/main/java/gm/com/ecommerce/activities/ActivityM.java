@@ -15,10 +15,9 @@ import java.util.List;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.BasketAdapter;
 import gm.com.ecommerce.models.MovieBasket;
-import gm.com.ecommerce.utils.DividerItemDecoration;
 
 public class ActivityM extends AppCompatActivity {
-    TabActivity tabActivity;
+    BaseActivity baseActivity;
     ImageView shop,search;
     public RecyclerView recyclerView;
     public List<MovieBasket> movieList;
@@ -27,11 +26,11 @@ public class ActivityM extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_m);
-        tabActivity=new TabActivity();
+        baseActivity =new BaseActivity();
         shop=(ImageView)findViewById(R.id.shop);
         search=(ImageView)findViewById(R.id.search);
-        tabActivity.drawerCreate(this,"Your Basket");
-        tabActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        baseActivity.drawerCreate(this,"Your Basket");
+        baseActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         shop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
 
@@ -52,7 +51,6 @@ public class ActivityM extends AppCompatActivity {
         BasketAdapter adapter_items = new BasketAdapter(movieList);
 
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
         recyclerView.setAdapter(adapter_items);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

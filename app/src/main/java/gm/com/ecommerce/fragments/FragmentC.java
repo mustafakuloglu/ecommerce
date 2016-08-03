@@ -46,12 +46,12 @@ public class FragmentC extends Fragment {
 
         item_list = new ArrayList<ItemDouble>();
 
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",4f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",1f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f));
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",0f));
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
-        item_list.add(new ItemDouble("Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",3f,"Product", "Suspendisse lacinia velit a nibh volutpat ornare.", R.drawable.lanscape_icon,"$100",2f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",4f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",1f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",0f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
+        item_list.add(new ItemDouble("Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",3f,"Product", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", R.drawable.cloud,"$100",2f));
 
         FragmantCadapter adapter_items = new FragmantCadapter(item_list);
 

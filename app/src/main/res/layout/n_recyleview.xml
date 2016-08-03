@@ -5,44 +5,32 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="94dp"
+        android:layout_height="102dp"
          android:layout_gravity="top"
         android:background="@color/md_white_1000"
-        android:elevation="1dp"
+        android:elevation="0.3dp"
         android:id="@+id/rl1n"
         android:layout_marginBottom="1dp"
         >
+
+
         <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/item_icon1n"
+            android:id="@+id/item_iconn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginBottom="13dp"
-            android:background="@color/menu_light"
+
+
             />
-
-
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:id="@+id/item_iconn"
-            android:layout_marginLeft="38dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginBottom="38dp"
-            android:layout_alignParentLeft="true"
-
-            />
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
             android:id="@+id/item_menun"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="12dp"
             android:src="@drawable/ic_more_vert_black_24dp"
 
             />
@@ -53,12 +41,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/item_titlen"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
-            android:layout_toRightOf="@id/item_icon1n"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/item_iconn"
+            android:layout_marginLeft="8dp"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="@color/md_black_1000"
+            android:textColor="@color/black_text"
 
             />
 
@@ -66,11 +54,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/item_textn"
-            android:layout_below="@+id/item_titlen"
-            android:layout_toRightOf="@id/item_icon1n"
-android:layout_marginBottom="4dp"
+            android:textSize="13dp"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@id/item_iconn"
             android:layout_toLeftOf="@id/item_menun"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="8dp"
             android:textColor="@color/menu_light"
 
             />
@@ -81,11 +69,10 @@ android:layout_marginBottom="4dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
-            android:textSize="15sp"
+            android:layout_marginTop="16dp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/button_red"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
 
             />
 
@@ -93,11 +80,15 @@ android:layout_marginBottom="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBarn"
-            android:layout_marginTop="54dp"
-            android:layout_marginLeft="20dp"
-            android:scaleX="0.4"
-            android:scaleY="0.4"
-            android:progressTint="@color/menu_light"/>
+            style="?android:attr/ratingBarStyleIndicator"
+            android:scaleX="0.45"
+            android:scaleY="0.45"
+            android:layout_marginBottom="8dp"
+            android:progressTint="@color/menu_light"
+            android:layout_marginLeft="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/item_iconn"/>
 
     </RelativeLayout>
+
 </LinearLayout>

@@ -3,9 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#474a4f</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="line_color">#F0F2F5</color>
+    <color name="color_placehold">#999EA4</color>
 <color name="activity_e_bg">#EDEFF2</color>
     <color name="activity_e_card_bg">#BBBFC4</color>
     <color name="button_red">#ff5252</color>
+    <color name="black_text">#56585C</color>56585C
     <color name="underline">#ddd8d8</color>
 <color name="menu_dark_selected">#7c7c7c</color>
     <color name="menu_light">#91969c</color>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.fragments.FragmentB;
 
-public class ActivityB extends TabActivity {
+public class ActivityB extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

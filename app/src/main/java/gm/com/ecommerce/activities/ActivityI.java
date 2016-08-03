@@ -13,7 +13,6 @@ import java.util.List;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.MoviesAdapter;
 import gm.com.ecommerce.models.Movie;
-import gm.com.ecommerce.utils.DividerItemDecoration;
 
 public class ActivityI extends AppCompatActivity {
     public RecyclerView recyclerView;
@@ -23,8 +22,8 @@ public class ActivityI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
-        TabActivity tabActivity = new TabActivity();
-        tabActivity.drawerCreate(this,"Catagories");
+        BaseActivity baseActivity = new BaseActivity();
+        baseActivity.drawerCreate(this,"Categories");
         mAdapter=new MoviesAdapter(movieList);
         recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
@@ -46,7 +45,6 @@ public class ActivityI extends AppCompatActivity {
         MoviesAdapter adapter_items = new MoviesAdapter(movieList);
 
         recyclerView.setHasFixedSize(true);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
         recyclerView.setAdapter(adapter_items);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

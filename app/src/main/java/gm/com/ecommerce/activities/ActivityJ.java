@@ -8,17 +8,17 @@ import android.widget.ImageView;
 import gm.com.ecommerce.R;
 
 public class ActivityJ extends AppCompatActivity {
-TabActivity tabActivity;
+BaseActivity baseActivity;
     ImageView shop,search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_15);
-        tabActivity=new TabActivity();
+        baseActivity =new BaseActivity();
         shop=(ImageView)findViewById(R.id.shop);
         search=(ImageView)findViewById(R.id.search);
-        tabActivity.drawerCreate(this,"Form");
-        tabActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        baseActivity.drawerCreate(this,"Form");
+        baseActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         shop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
     }

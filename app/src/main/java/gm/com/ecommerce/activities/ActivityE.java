@@ -21,8 +21,8 @@ public class ActivityE extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_e);
-        TabActivity tabActivity=new TabActivity();
-        tabActivity.drawerCreate(this,"Catagories");
+        BaseActivity baseActivity =new BaseActivity();
+        baseActivity.drawerCreate(this,"Catagories");
         recycler_view = (RecyclerView)findViewById(R.id.recycler_view);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);

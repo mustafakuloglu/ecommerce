@@ -30,12 +30,13 @@ import gm.com.ecommerce.fragments.onefragment;
 import gm.com.ecommerce.fragments.threefragment;
 import gm.com.ecommerce.fragments.twofragment;
 
-public class TabActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
     Toolbar toolbar;
     Activity activity=new Activity();
+    int id= 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,19 +56,19 @@ public class TabActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter= new ViewPagerAdapter(getSupportFragmentManager());
         if(f1==null) {
-            adapter.addfrag(new onefragment(), "Catagory");
+            adapter.addfrag(new onefragment(), "Category");
         }
         else{
             adapter.addfrag(f1,"Catagory");
         }
         if(f2==null) {
-            adapter.addfrag(new twofragment(), "Catagory");
+            adapter.addfrag(new twofragment(), "Category");
         }
         else{
             adapter.addfrag(f2,"");
         }
         if(f3==null) {
-            adapter.addfrag(new threefragment(), "Catagory");
+            adapter.addfrag(new threefragment(), "Category");
         }
         else{
             adapter.addfrag(f3,"");
@@ -137,6 +138,8 @@ public class TabActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem itemD = new PrimaryDrawerItem().withIdentifier(11).withName("Activity D").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+       final PrimaryDrawerItem itemA = new PrimaryDrawerItem().withIdentifier(12).withName("Activity A").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.drawer_header_bg_grey)
@@ -163,6 +166,8 @@ public class TabActivity extends AppCompatActivity {
                         item1,
                         item2,
                         new SectionDrawerItem().withName(R.string.subheader),
+                        itemA,
+                        itemB,
                         itemC,
                         itemE,
                         itemI,
@@ -174,34 +179,44 @@ public class TabActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        if(drawerItem.getIdentifier()==4)
-                        { Intent main=new Intent(activity,ActivityE.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==5)
-                        { Intent main=new Intent(activity,ActivityJ.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==7)
-                        { Intent main=new Intent(activity,ActivityC.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==6)
-                        { Intent main=new Intent(activity,ActivityI.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==8)
-                        { Intent main=new Intent(activity,ActivityM.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==9)
-                        { Intent main=new Intent(activity,ActivityN.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==10)
-                        { Intent main=new Intent(activity,ActivityB.class);
-                            activity.startActivity(main);}
-                        if(drawerItem.getIdentifier()==11)
-                        { Intent main=new Intent(activity,ActivityD.class);
-                            activity.startActivity(main);}
+                        id= (int) drawerItem.getIdentifier();
+                        startScreen();
                     return false;}
                 })
 
                 .build();
     }
+    private void startScreen()
+    {
+        activity.finish();
+        if(id==4)
+        { Intent main=new Intent(activity,ActivityE.class);
+            activity.startActivity(main);}
+        if(id==5)
+        { Intent main=new Intent(activity,ActivityJ.class);
+            activity.startActivity(main);}
+        if(id==7)
+        { Intent main=new Intent(activity,ActivityC.class);
+            activity.startActivity(main);}
+        if(id==6)
+        { Intent main=new Intent(activity,ActivityI.class);
+            activity.startActivity(main);}
+        if(id==8)
+        { Intent main=new Intent(activity,ActivityM.class);
+            activity.startActivity(main);}
+        if(id==9)
+        { Intent main=new Intent(activity,ActivityN.class);
+            activity.startActivity(main);}
+        if(id==10)
+        { Intent main=new Intent(activity,ActivityB.class);
+            activity.startActivity(main);}
+        if(id==11)
+        { Intent main=new Intent(activity,ActivityD.class);
+            activity.startActivity(main);}
+        if(id==12)
+        { Intent main=new Intent(activity,ActivityA.class);
+            activity.startActivity(main);}
+    }
+
 
 }

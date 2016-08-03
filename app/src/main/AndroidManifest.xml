@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.TabActivity"
+            android:name=".activities.BaseActivity"
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

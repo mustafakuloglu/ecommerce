@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scroll">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ActivityJ">
+    tools:context=".activities.ActivityJ"
+    android:background="@color/md_white_1000">
     <include
         android:id="@+id/tool_bar"
         layout="@layout/actiontool_bar" />
@@ -16,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_below="@+id/tool_bar"
         android:layout_alignParentStart="true"
-        android:textColor="@color/menu_light"
+        android:textColor="@color/activity_e_card_bg"
         android:paddingLeft="12dp"
         android:paddingTop="10dp"/>
 
@@ -27,19 +32,19 @@
         android:id="@+id/textView2"
         android:paddingLeft="12dp"
         android:paddingTop="7dp"
-        android:textSize="15dp"
-        android:textColor="@color/menu_dark_selected"
+        android:textSize="18dp"
+        android:textColor="@color/color_placehold"
 
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
     <View
         android:layout_below="@id/textView2"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_width="fill_parent"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_height="2dp"
-        android:background="@color/underline"
+        android:layout_height="1.5dp"
+        android:background="@color/line_color"
         android:id="@+id/underline"/>
     <TextView
                 android:layout_width="wrap_content"
@@ -49,29 +54,30 @@
         android:id="@+id/textView3"
         android:layout_below="@+id/underline"
         android:layout_alignParentStart="true"
-        android:textColor="@color/menu_light"
-        android:paddingLeft="16dp"
-        android:paddingTop="12dp"/>
+        android:textColor="@color/activity_e_card_bg"
+        android:paddingLeft="14dp"
+        android:paddingTop="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="some text "
         android:id="@+id/textView4"
+        android:textColor="@color/black_text"
         android:paddingLeft="12dp"
-        android:paddingTop="7dp"
-        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textSize="18dp"
 
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
     <View
         android:layout_below="@id/textView4"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_width="fill_parent"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_height="2dp"
-        android:background="@color/underline"
+        android:layout_height="1.5dp"
+        android:background="@color/line_color"
         android:id="@+id/underline2"/>
     <TextView
         android:layout_width="wrap_content"
@@ -81,18 +87,19 @@
         android:id="@+id/textView5"
         android:layout_below="@+id/underline2"
         android:layout_alignParentStart="true"
-        android:textColor="@color/menu_light"
+        android:textColor="@color/activity_e_card_bg"
         android:paddingLeft="12dp"
-        android:paddingTop="16dp"/>
+        android:paddingTop="24dp"/>
 
     <Spinner
-        android:paddingTop="7dp"
+        android:paddingTop="16dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
         android:entries="@array/Weight"
+
         android:layout_below="@id/textView5"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="8dp"/>
@@ -102,8 +109,8 @@
         android:layout_width="fill_parent"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_height="2dp"
-        android:background="@color/underline"
+        android:layout_height="1.5dp"
+        android:background="@color/line_color"
         android:id="@+id/underline3"/>
     <TextView
         android:layout_width="wrap_content"
@@ -113,9 +120,9 @@
         android:id="@+id/textView6"
         android:layout_below="@+id/underline3"
         android:layout_alignParentStart="true"
-        android:textColor="@color/menu_light"
+        android:textColor="@color/activity_e_card_bg"
         android:paddingLeft="12dp"
-        android:paddingTop="10dp"/>
+        android:paddingTop="24dp"/>
     <Spinner
         android:paddingTop="7dp"
         android:layout_width="fill_parent"
@@ -130,12 +137,12 @@
         android:layout_marginRight="196dp"/>
     <View
         android:layout_below="@id/spinner2"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:layout_width="fill_parent"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="200dp"
-        android:layout_height="2dp"
-        android:background="@color/underline"
+        android:layout_height="1.5dp"
+        android:background="@color/line_color"
         android:id="@+id/underline4"/>
     <TextView
         android:layout_width="wrap_content"
@@ -145,9 +152,9 @@
         android:id="@+id/textView7"
         android:layout_below="@+id/underline3"
         android:layout_alignParentStart="true"
-        android:textColor="@color/menu_light"
+        android:textColor="@color/activity_e_card_bg"
         android:paddingLeft="192dp"
-        android:paddingTop="10dp"/>
+        android:paddingTop="24dp"/>
     <Spinner
         android:paddingTop="7dp"
         android:layout_width="fill_parent"
@@ -166,12 +173,12 @@
         android:layout_width="fill_parent"
         android:layout_marginLeft="192dp"
         android:layout_marginRight="12dp"
-        android:layout_height="2dp"
-        android:background="@color/underline"
+        android:layout_height="1.5dp"
+        android:background="@color/line_color"
         android:id="@+id/underline5"/>
 
     <CheckBox
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="34dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="option"
@@ -183,7 +190,7 @@
         android:clickable="false"/>
 
     <CheckBox
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="34dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="option"
@@ -195,7 +202,7 @@
         />
 
     <RadioButton
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="option"
@@ -207,7 +214,7 @@
         android:clickable="false"/>
 
     <RadioButton
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="option"
@@ -219,23 +226,33 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="176dp"
         android:layout_height="50dp"
         android:text="BUTTON"
         android:id="@+id/button"
-        android:layout_below="@id/radioButton"
         android:layout_marginLeft="12dp"
         android:backgroundTint="@color/menu_light"
+        android:layout_below="@id/radioButton"
+        android:layout_alignParentLeft="true"
         android:textColor="@color/material_drawer_background"
-        android:layout_marginTop="98dp"/>
+        android:layout_marginTop="100dp"
+
+
+        android:layout_marginBottom="16dp"
+        />
     <Button
-        android:layout_width="160dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="BUTTON"
+        android:layout_toRightOf="@id/button"
         android:id="@+id/button2"
-        android:layout_below="@+id/radioButton2"
-        android:layout_alignEnd="@+id/underline5"
         android:backgroundTint="@color/button_red"
-        android:textColor="@color/material_drawer_background"
-        android:layout_marginTop="98dp"/>
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/radioButton2"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+         android:textColor="@color/material_drawer_background"
+        android:layout_marginBottom="16dp"/>
 </RelativeLayout>
+</ScrollView>
