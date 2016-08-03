@@ -55,19 +55,19 @@ public class TabActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter= new ViewPagerAdapter(getSupportFragmentManager());
         if(f1==null) {
-            adapter.addfrag(new onefragment(), "Catagory");
+            adapter.addfrag(new onefragment(), "Category");
         }
         else{
-            adapter.addfrag(f1,"Catagory");
+            adapter.addfrag(f1,"Category");
         }
         if(f2==null) {
-            adapter.addfrag(new twofragment(), "Catagory");
+            adapter.addfrag(new twofragment(), "Category");
         }
         else{
             adapter.addfrag(f2,"");
         }
         if(f3==null) {
-            adapter.addfrag(new threefragment(), "Catagory");
+            adapter.addfrag(new threefragment(), "Category");
         }
         else{
             adapter.addfrag(f3,"");
