@@ -7,76 +7,80 @@
 
     <LinearLayout
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/activity_e_bg"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_e_bg">
 
         <RelativeLayout
-        android:layout_width="165dp"
-        android:layout_height="270dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="10dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/md_white_1000"
         >
         <ImageView
-            android:layout_width="155dp"
-            android:layout_height="150dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:id="@+id/icon"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:id="@+id/favo"
-            android:paddingTop="10dp"
-            android:paddingLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_favorite_black_24dp"
             android:layout_alignTop="@+id/shopppin"
             android:layout_toStartOf="@+id/navo" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:id="@+id/navo"
-            android:paddingTop="10dp"
-            android:layout_alignTop="@+id/favo"
-            android:layout_alignParentEnd="true" />
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:layout_below="@+id/lorem"
+            android:paddingTop="7dp"
+            android:layout_alignBottom="@+id/dolar"
+            android:layout_alignEnd="@+id/icon" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:id="@+id/shopppin"
-            android:paddingTop="10dp"
-            android:layout_alignBottom="@+id/dolar"
-            android:layout_alignParentEnd="true"
-            android:paddingRight="5dp"
-            android:layout_marginEnd="46dp" />
+            android:src="@drawable/ic_shopping_basket_black_24dp1"
+            android:layout_alignBottom="@+id/navo"
+            android:layout_marginRight="3dp"
+            android:layout_toStartOf="@+id/favo"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="12sp"
-            android:paddingTop="15dp"
+            android:paddingTop="10dp"
             android:paddingLeft="10dp"
             android:id="@+id/dolar"
+            android:text="$100"
             android:textStyle="bold"
             android:textColor="#fe7777"
             android:layout_below="@+id/lorem"
             android:layout_alignParentStart="true" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="12sp"
+            android:textStyle="bold"
             android:paddingLeft="10dp"
             android:id="@+id/lorem"
+            android:text="Lorem ipsum dolor sit amet consecteur adipiscing elit."
             android:textColor="#a9adb2"
             android:paddingTop="2dp"
             android:layout_below="@+id/urun"
@@ -90,7 +94,7 @@
             android:paddingLeft="12dp"
             android:id="@+id/urun"
             android:textColor="@color/md_black_1000"
-            android:paddingTop="70dp"
+            android:paddingTop="90dp"
             android:layout_centerVertical="true"
            />
     </RelativeLayout>
