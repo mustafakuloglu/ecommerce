@@ -140,6 +140,9 @@ public class BaseActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
        final PrimaryDrawerItem itemA = new PrimaryDrawerItem().withIdentifier(12).withName("Activity A").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem itemG = new PrimaryDrawerItem().withIdentifier(13).withName("Activity G").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.drawer_header_bg_grey)
@@ -170,6 +173,7 @@ public class BaseActivity extends AppCompatActivity {
                         itemB,
                         itemC,
                         itemE,
+                        itemG,
                         itemI,
                         itemJ,
                         itemM,
@@ -188,7 +192,6 @@ public class BaseActivity extends AppCompatActivity {
     }
     private void startScreen()
     {
-        activity.finish();
         if(id==4)
         { Intent main=new Intent(activity,ActivityE.class);
             activity.startActivity(main);}
@@ -215,6 +218,9 @@ public class BaseActivity extends AppCompatActivity {
             activity.startActivity(main);}
         if(id==12)
         { Intent main=new Intent(activity,ActivityA.class);
+            activity.startActivity(main);}
+        if(id==13)
+        { Intent main=new Intent(activity,ActivityG.class);
             activity.startActivity(main);}
     }
 

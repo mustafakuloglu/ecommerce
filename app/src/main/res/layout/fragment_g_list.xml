@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="176dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        android:background="@color/fra_g_bg"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:id="@+id/photo_bg_g"
+            android:background="@color/activity_e_card_bg"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/photo_g"
+            android:layout_marginTop="56dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_g"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="128dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/fra_g_text"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            android:id="@+id/imageView3_g"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_g"
+            android:textSize="14dp"
+            android:layout_below="@+id/title_g"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/fra_g_text"
+
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
