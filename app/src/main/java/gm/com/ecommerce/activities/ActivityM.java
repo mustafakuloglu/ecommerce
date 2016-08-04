@@ -15,6 +15,7 @@ import java.util.List;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.BasketAdapter;
 import gm.com.ecommerce.models.MovieBasket;
+import gm.com.ecommerce.utils.DividerItemDecoration;
 
 public class ActivityM extends AppCompatActivity {
     BaseActivity baseActivity;
@@ -39,14 +40,15 @@ public class ActivityM extends AppCompatActivity {
         recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
         movieList =new ArrayList<MovieBasket>();
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_less_black_24dp,R.drawable.ic_expand_more_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_less_black_24dp,R.drawable.ic_expand_more_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_less_black_24dp,R.drawable.ic_expand_more_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_less_black_24dp,R.drawable.ic_expand_more_black_24dp));
+        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
 
         BasketAdapter adapter_items = new BasketAdapter(movieList);
 

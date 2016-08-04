@@ -172,6 +172,7 @@ public class BaseActivity extends AppCompatActivity {
                         itemA,
                         itemB,
                         itemC,
+                        itemD,
                         itemE,
                         itemG,
                         itemI,

@@ -49,10 +49,13 @@ public class FragmentD extends Fragment {
         recycler_view.setLayoutManager(layoutManager);
         recycler_view.setAdapter(mAdapter);
         item_list = new ArrayList<FragD>();
-        item_list.add(new FragD("Product","$100",R.drawable.icon));
-        item_list.add(new FragD("Product","$100",R.drawable.icon));
-        item_list.add(new FragD("Product","$100",R.drawable.icon));
-        item_list.add(new FragD("Product","$100",R.drawable.icon));
+        item_list.add(new FragD("Product","$100",R.drawable.res1));
+        item_list.add(new FragD("Product","$100",R.drawable.res2));
+        item_list.add(new FragD("Product","$100",R.drawable.res3));
+        item_list.add(new FragD("Product","$100",R.drawable.res2));
+        item_list.add(new FragD("Product","$100",R.drawable.res1));
+        item_list.add(new FragD("Product","$100",R.drawable.res3));
+
 
         FragdAdapter adapter_items = new FragdAdapter(item_list);
 

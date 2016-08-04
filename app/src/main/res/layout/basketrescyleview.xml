@@ -6,11 +6,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:background="@color/md_white_1000"
-        android:elevation="0.3dp"
-        android:layout_marginBottom="1dp"
-        >
+        android:layout_marginLeft="15dp"
+
+        android:background="@color/md_white_1000">
 
         <ImageView
             android:layout_width="50dp"
@@ -18,6 +16,9 @@
             android:id="@+id/person_photo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
             android:paddingRight="7dp"
             />
 
@@ -29,7 +30,7 @@
             android:layout_alignParentTop="true"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:paddingTop="5dp"
+            android:paddingTop="10dp"
             android:paddingLeft="7dp"
             />
 
@@ -45,36 +46,34 @@
             android:paddingLeft="8dp"
             />
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_more_black_24dp"
             android:id="@+id/person_photo1"
-            android:layout_toRightOf="@+id/person_name"
-            android:paddingLeft="190dp"
-            android:paddingTop="15dp"
-            />
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/counter" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/counter"
-            android:layout_toRightOf="@+id/person_name"
-            android:gravity="right"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:text="1"
+            android:layout_marginRight="5dp"
             android:textColor="#6e7277"
-            android:paddingRight="38dp"
-            android:paddingTop="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/person_photo2" />
 
-
-            />
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/person_name"
-            android:paddingLeft="100dp"
-            android:paddingTop="15dp"
+            android:src="@drawable/ic_expand_less_black_24dp"
             android:id="@+id/person_photo2"
-            />
+            android:layout_marginRight="15dp"
+            android:layout_alignBottom="@+id/person_age"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/person_age" />
     </RelativeLayout>
-
 
 </LinearLayout>
