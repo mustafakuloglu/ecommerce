@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scroll">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +12,8 @@
     android:background="@color/md_white_1000">
     <include
         android:id="@+id/tool_bar"
-        layout="@layout/actiontool_bar" />
+        layout="@layout/actiontool_bar"
+        />
 
     <TextView
         android:layout_width="wrap_content"

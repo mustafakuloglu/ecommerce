@@ -1,0 +1,73 @@
+package gm.com.ecommerce.adapters;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import gm.com.ecommerce.R;
+import gm.com.ecommerce.models.ModelL;
+
+/**
+ * Created by musta on 4.08.2016.
+ */
+public class ActivityLCommentAdapter extends RecyclerView.Adapter<ActivityLCommentAdapter.ViewHolder> {
+public static class ViewHolder extends RecyclerView.ViewHolder {
+    @BindView(R.id.ratingBar_list) RatingBar ratingBar;
+    @BindView(R.id.user_l)TextView user;
+    @BindView(R.id.time_l)TextView time;
+    @BindView(R.id.commment_l)TextView comment;
+
+
+
+    public ViewHolder(View view) {
+        super(view);
+        ButterKnife.bind(this,view);
+
+    }
+}
+    List<ModelL> list_model;
+    public ActivityLCommentAdapter(List<ModelL> list_person) {
+
+        this.list_model = list_person;
+    }
+
+
+    @Override
+    public ActivityLCommentAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_l_rcycle, parent, false);
+
+        ViewHolder view_holder = new ViewHolder(v);
+        return view_holder;
+    }
+
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+
+        holder.comment.setText(list_model.get(position).getComment());
+        holder.user.setText(list_model.get(position).getUser());
+        holder.time.setText(list_model.get(position).getTime());
+        holder.ratingBar.setRating(list_model.get(position).getRating());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list_model.size();
+    }
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+
+
+}
