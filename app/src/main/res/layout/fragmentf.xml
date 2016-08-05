@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scroll">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f2f5"
+        tools:context="gm.com.ecommerce.activities.MainActivity"
+        android:focusableInTouchMode="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView8"
+            android:src="@drawable/resf1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView9"
+            android:src="@drawable/resf1a"
+            android:layout_alignTop="@+id/imageView8"
+            android:layout_toEndOf="@+id/imageView8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Product"
+            android:textColor="#f0f2f5"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/textView12"
+            android:layout_alignTop="@+id/imageView8"
+            android:layout_toEndOf="@+id/imageView8"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Lorem ipsum dolar sit amet, consecteur adilpiscing elit."
+            android:id="@+id/textView13"
+            android:layout_marginTop="5dp"
+            android:textColor="#f0f2f5"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+
+            android:layout_below="@+id/textView12"
+            android:layout_alignStart="@+id/imageView9" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBarn"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:scaleX="0.45"
+            android:scaleY="0.45"
+            android:progressTint="@color/md_white_1000"
+            android:progressBackgroundTint="@color/md_blue_grey_100"
+            android:layout_marginLeft="32dp"
+            android:numStars="5"
+            android:transformPivotX="20dp"
+            android:layout_marginTop="10dp"
+            android:rating="4"
+            android:layout_below="@+id/textView13"
+            android:layout_alignEnd="@+id/imageView9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="$100"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/md_white_1000"
+            android:id="@+id/textView14"
+            android:layout_below="@+id/ratingBarn"
+            android:layout_alignStart="@+id/textView13" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/imageView10"
+            android:src="@drawable/ic_shopping_basket_black_24dp2"
+            android:layout_alignTop="@+id/imageView12"
+            android:layout_toStartOf="@+id/imageView12" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/imageView11"
+            android:src="@drawable/ic_more_vert_black_24dp1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignBottom="@+id/textView14"
+            android:layout_alignEnd="@+id/imageView9" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/imageView12"
+            android:src="@drawable/ic_favorite_black_24dp1"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/imageView11"
+            android:layout_toStartOf="@+id/imageView11" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_f"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView8"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"
+
+            />
+
+
+    </RelativeLayout>
+</ScrollView>
