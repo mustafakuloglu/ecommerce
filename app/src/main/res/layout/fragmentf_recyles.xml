@@ -7,7 +7,7 @@
     >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="225dp"
         android:layout_marginBottom="2dp"
         android:layout_gravity="center"
         android:background="@color/fra_g_bg"
@@ -42,6 +42,7 @@
             android:textStyle="bold"
             android:textColor="#f0f2f5"
             android:textSize="12sp"
+            android:layout_marginTop="3dp"
             android:id="@+id/textView16"
             android:layout_below="@+id/textView15"
             android:layout_alignStart="@+id/textView15" />
@@ -60,16 +61,17 @@
             android:layout_height="18dp"
             android:id="@+id/imageView14"
             android:src="@drawable/ic_more_vert_black_24dp1"
-            android:layout_alignTop="@+id/imageView15"
+            android:layout_alignBottom="@+id/textView16"
             android:layout_toStartOf="@+id/imageView15" />
 
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:id="@+id/imageView15"
+
             android:src="@drawable/ic_shopping_basket_black_24dp2"
             android:layout_marginLeft="10dp"
-            android:layout_alignBottom="@+id/textView16"
+            android:layout_alignTop="@+id/imageView13"
             android:layout_toStartOf="@+id/imageView13" />
 
 
