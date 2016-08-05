@@ -40,6 +40,7 @@
         <activity android:name=".activities.ActivityA" />
         <activity android:name=".activities.ActivityB" />
         <activity android:name=".activities.ActivityG" />
+        <activity android:name=".activities.ActivityL" />
         <activity
             android:name=".activities.ActivityD"
             android:label="@string/title_activity_activity_d"

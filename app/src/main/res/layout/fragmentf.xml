@@ -11,26 +11,42 @@
         tools:context="gm.com.ecommerce.activities.MainActivity"
         android:focusableInTouchMode="true"
         >
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView8"
-            android:src="@drawable/resf1"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView9"
-            android:src="@drawable/resf1a"
-            android:layout_alignTop="@+id/imageView8"
-            android:layout_toEndOf="@+id/imageView8" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/f_lineer"
+    android:weightSum="1"
+    android:layout_marginTop="4dp"
+    android:layout_alignParentTop="true">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:id="@+id/imageView22"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/activity_e_card_bg">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:src="@drawable/resf1"
+        android:layout_marginLeft="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView9"
+        android:layout_weight="0.5"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/menu_light">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,96 +55,99 @@
             android:textColor="#f0f2f5"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:layout_marginTop="16dp"
             android:id="@+id/textView12"
-            android:layout_alignTop="@+id/imageView8"
-            android:layout_toEndOf="@+id/imageView8"
+            android:layout_marginLeft="8dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
             />
 
         <TextView
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Lorem ipsum dolar sit amet, consecteur adilpiscing elit."
             android:id="@+id/textView13"
             android:layout_marginTop="5dp"
             android:textColor="#f0f2f5"
-            android:layout_marginLeft="10dp"
             android:textSize="14sp"
-
             android:layout_below="@+id/textView12"
-            android:layout_alignStart="@+id/imageView9" />
+            />
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBarn"
-            style="?android:attr/ratingBarStyleIndicator"
             android:scaleX="0.45"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_marginLeft="8dp"
             android:scaleY="0.45"
             android:progressTint="@color/md_white_1000"
             android:progressBackgroundTint="@color/md_blue_grey_100"
-            android:layout_marginLeft="32dp"
             android:numStars="5"
-            android:transformPivotX="20dp"
-            android:layout_marginTop="10dp"
+            android:transformPivotX="0dp"
+            android:layout_marginTop="16dp"
             android:rating="4"
             android:layout_below="@+id/textView13"
-            android:layout_alignEnd="@+id/imageView9" />
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="$100"
             android:textStyle="bold"
             android:textSize="14sp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/md_white_1000"
             android:id="@+id/textView14"
-            android:layout_below="@+id/ratingBarn"
-            android:layout_alignStart="@+id/textView13" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
 
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:id="@+id/imageView10"
             android:src="@drawable/ic_shopping_basket_black_24dp2"
-            android:layout_alignTop="@+id/imageView12"
-            android:layout_toStartOf="@+id/imageView12" />
+            android:layout_toLeftOf="@+id/imageView12"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"/>
 
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:id="@+id/imageView11"
             android:src="@drawable/ic_more_vert_black_24dp1"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_alignBottom="@+id/textView14"
-            android:layout_alignEnd="@+id/imageView9" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"/>
 
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:id="@+id/imageView12"
             android:src="@drawable/ic_favorite_black_24dp1"
-            android:layout_marginLeft="10dp"
-            android:layout_alignTop="@+id/imageView11"
-            android:layout_toStartOf="@+id/imageView11" />
+             android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imageView11"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    </LinearLayout>
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_f"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView8"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="2dp"
             android:layout_marginLeft="4dp"
             android:layout_marginBottom="4dp"
+            android:layout_below="@id/f_lineer"
 
             />
-
-
     </RelativeLayout>
 </ScrollView>

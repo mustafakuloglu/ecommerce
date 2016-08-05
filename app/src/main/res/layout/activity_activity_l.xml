@@ -24,7 +24,7 @@
             tools:context="gm.com.ecommerce.activities.ActivityL"
             android:focusableInTouchMode="true"
             android:layout_marginBottom="16dp"
-            android:background="@color/black_text">
+            android:background="@color/activity_e_card_bg">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"

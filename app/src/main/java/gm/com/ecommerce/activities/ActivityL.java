@@ -38,9 +38,9 @@ public class ActivityL extends AppCompatActivity {
 
         recycler_view.setLayoutManager(layoutManager);
         item_list = new ArrayList<ModelL>();
-        item_list.add(new ModelL(3,"by username","2 hours ago","xtfjxcyhkmxhymkxmmxzzdtfgbzetnzynzygnrgzaewrgeztrmmhgg f"));
-        item_list.add(new ModelL(3,"by username","2 hours ago","xtfjxcyhkmxhymkxmmxgazdgbztnbryergsxetrgsezrtrmmhgg f"));
-        item_list.add(new ModelL(3,"by username","2 hours ago","xtfjxcyhkmxhymkxmmxmgzerbzsenzrynwegaermhgg f"));
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt effiamet."));
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet."));
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit.  f"));
 
         ActivityLCommentAdapter adapter_items=new ActivityLCommentAdapter(item_list);
         recycler_view.setHasFixedSize(true);

@@ -144,6 +144,9 @@ public class BaseActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
         final PrimaryDrawerItem itemF = new PrimaryDrawerItem().withIdentifier(14).withName("Activity F").withIcon(R.drawable.item_icon)
                 .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+        final PrimaryDrawerItem itemL = new PrimaryDrawerItem().withIdentifier(15).withName("Activity L").withIcon(R.drawable.item_icon)
+                .withTextColorRes(R.color.menu_light).withSelectedTextColorRes(R.color.menu_dark_selected).withSelectedIcon(R.drawable.item_icon_dark);
+
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(activity)
                 .withHeaderBackground(R.drawable.drawer_header_bg_grey)
@@ -179,6 +182,7 @@ public class BaseActivity extends AppCompatActivity {
                         itemG,
                         itemI,
                         itemJ,
+                        itemL,
                         itemM,
                         itemN
                 )
@@ -227,6 +231,9 @@ public class BaseActivity extends AppCompatActivity {
             activity.startActivity(main);}
         if(id==14)
         { Intent main=new Intent(activity,ActivityF.class);
+            activity.startActivity(main);}
+        if(id==15)
+        { Intent main=new Intent(activity,ActivityL.class);
             activity.startActivity(main);}
     }
 

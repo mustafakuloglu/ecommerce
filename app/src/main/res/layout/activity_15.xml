@@ -94,16 +94,13 @@
         android:paddingTop="24dp"/>
 
     <Spinner
-        android:paddingTop="16dp"
+        android:entries="@array/Weight"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:entries="@array/Weight"
-
-        android:layout_below="@id/textView5"
+       android:layout_below="@id/textView5"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"/>
     <View
         android:layout_below="@id/spinner"
@@ -136,7 +133,8 @@
         android:entries="@array/Weight"
         android:layout_below="@id/textView6"
         android:layout_marginLeft="4dp"
-        android:layout_marginRight="196dp"/>
+        android:layout_marginRight="196dp"
+        android:focusableInTouchMode="false" />
     <View
         android:layout_below="@id/spinner2"
         android:layout_marginTop="10dp"
@@ -171,7 +169,7 @@
         android:layout_marginRight="8dp"/>
     <View
         android:layout_below="@id/spinner3"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:layout_width="fill_parent"
         android:layout_marginLeft="192dp"
         android:layout_marginRight="12dp"
@@ -227,34 +225,33 @@
         android:layout_marginLeft="45dp"
         />
 
-    <Button
-        android:layout_width="176dp"
-        android:layout_height="50dp"
-        android:text="BUTTON"
-        android:id="@+id/button"
-        android:layout_marginLeft="12dp"
-        android:backgroundTint="@color/menu_light"
-        android:layout_below="@id/radioButton"
-        android:layout_alignParentLeft="true"
-        android:textColor="@color/material_drawer_background"
-        android:layout_marginTop="100dp"
-
-
-        android:layout_marginBottom="16dp"
-        />
-    <Button
-        android:layout_marginTop="100dp"
+    <LinearLayout
+        android:layout_marginTop="140dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="BUTTON"
-        android:layout_toRightOf="@id/button"
-        android:id="@+id/button2"
-        android:backgroundTint="@color/button_red"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/radioButton2"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="8dp"
-         android:textColor="@color/material_drawer_background"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:weightSum="1"
+        android:layout_below="@id/radioButton">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="50dp"
+            android:text="BUTTON"
+            android:layout_marginRight="16dp"
+            android:id="@+id/button"
+            android:backgroundTint="@color/menu_light"
+            android:textColor="@color/md_white_1000"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="50dp"
+            android:text="BUTTON"
+            android:id="@+id/button2"
+            android:backgroundTint="@color/button_red"
+            android:textColor="@color/material_drawer_background"/>
+    </LinearLayout>
 </RelativeLayout>
 </ScrollView>
