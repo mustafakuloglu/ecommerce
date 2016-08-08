@@ -7,7 +7,7 @@
     tools:context="gm.com.ecommerce.activities.ActivityL"
     android:focusableInTouchMode="true"
     android:layout_marginBottom="16dp"
-    android:background="@color/activity_e_card_bg">
+    android:background="@color/activity_e_bg">
     <include
         android:id="@+id/tool_bar"
         layout="@layout/actiontool_bar" />
@@ -24,7 +24,7 @@
             tools:context="gm.com.ecommerce.activities.ActivityL"
             android:focusableInTouchMode="true"
             android:layout_marginBottom="16dp"
-            android:background="@color/activity_e_card_bg">
+            android:background="@color/activity_e_bg">
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
@@ -34,6 +34,7 @@
                 tools:context="gm.com.ecommerce.activities.ActivityL"
                 android:focusableInTouchMode="true"
                 android:background="@color/md_white_1000"
+                android:elevation="1dp"
                 android:layout_marginBottom="8dp">
                 <RelativeLayout
                     android:layout_marginLeft="4dp"
@@ -145,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/ratingBar_l"
                     android:transformPivotY="0dp"
+                    android:progressTint="@color/menu_light"
                     android:transformPivotX="0dp"
                     android:scaleX="0.4"
                     android:layout_marginLeft="8dp"
@@ -175,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt effiamet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt efficitur. Praesent viverra, ligula ac bibendum varius."
                     android:id="@+id/info_l"
+                    android:textColor="@color/menu_light"
                     android:layout_below="@id/review_l"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
@@ -199,123 +202,89 @@
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/black_text"
                     />
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lin_2_l"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginRight="70dp"
-                    tools:context="gm.com.ecommerce.activities.ActivityL"
-                    android:layout_below="@id/variant_l"
-                    android:elevation="2dp"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_height="33dp"
-                        android:layout_weight="0.2"
-                        android:id="@+id/circle_bg_1"
-                        android:layout_width="wrap_content"
-                        >
-                        <ImageView
-                            android:layout_centerInParent="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@color/menu_dark_selected"
-                            android:id="@+id/circle_1"
-                            android:src="@drawable/white"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/a_l_1"
-                            android:text="A"
-                            android:textColor="@color/md_white_1000"
-                            android:layout_centerInParent="true"/></RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="0.2"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:layout_below="@id/variant_l"
+                        android:layout_width="match_parent"
+                        android:id="@+id/lin_2_l"
+                        android:weightSum="1"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="8dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/circle_2"><ImageView
-                        android:background="@color/md_white_1000"
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
-                        android:id="@+id/circle_bg_2"
-                        android:src="@drawable/white"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioAndroid"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:textStyle="bold"
+                            android:background="@drawable/rbtn_selector"
+                            android:layout_marginLeft="16dp"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="A"
+                            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                        <RadioButton
+                            android:id="@+id/radioiPhone"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/rbtn_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:text="B"
-                            android:id="@+id/a_l_2"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    <RelativeLayout
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="0.2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/circle_3"><ImageView
-                        android:background="@color/md_white_1000"
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
-                        android:id="@+id/circle_bg_3"
-                        android:src="@drawable/white"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/a_l_3"
+                            android:textColor="@drawable/rbtn_textcolor_selector" />
+                        <RadioButton
+                            android:id="@+id/radioiPhone1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/rbtn_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:padding="5dp"
                             android:text="C"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    <RelativeLayout
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_weight="0.2"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/circle_4"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:background="@color/md_white_1000"
-                        android:layout_height="33dp"
-                        android:id="@+id/circle_bg_4"
-                        android:src="@drawable/white"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/a_l_4"
-                            android:layout_height="wrap_content"
+                            android:textColor="@drawable/rbtn_textcolor_selector" />
+                        <RadioButton
+                            android:id="@+id/radioiPhone2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/rbtn_selector"
+                            android:layout_marginLeft="16dp"
+                            android:button="@null"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:text="D"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    <RelativeLayout
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.2"
-                        android:id="@+id/circle_bg_5"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
-                        android:id="@+id/circle_5"
-                        android:background="@color/md_white_1000"
-                        android:src="@drawable/white"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:id="@+id/a_l_5"
-                            android:layout_height="wrap_content"
+                            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                        <RadioButton
+                            android:id="@+id/radioWindows"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/rbtn_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:text="E"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                </LinearLayout>
+                            android:textStyle="bold"
+                            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    </RadioGroup>
+
                 <View
                     android:layout_below="@id/lin_2_l"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
                     android:background="@color/activity_e_card_bg"
                     android:id="@+id/line_2_l"/>
                 <TextView
@@ -330,100 +299,57 @@
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/black_text"
                     />
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lin_3_l"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginRight="80dp"
-                    tools:context="gm.com.ecommerce.activities.ActivityL"
-                    android:layout_below="@id/line_2_l"
-                    android:layout_marginTop="16dp"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
 
-                        android:id="@+id/circle_bg_6"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/lin_3_l"
+                        android:weightSum="1"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@id/variant_2_l"
                         android:layout_height="wrap_content"
-                        android:id="@+id/circle_6"
-                        android:src="@drawable/item_icon_light_1"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_check_white_24dp"
-                            android:visibility="gone"
-                            android:id="@+id/check_l_1"
-                            android:layout_centerInParent="true"/></RelativeLayout>
+                        android:orientation="horizontal">
 
+                        <RadioButton
+                            android:id="@+id/radioAndroid2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/item_icon_light_1"
+                            android:layout_marginLeft="20dp"
+                            android:button="@drawable/rbtn_selector_2"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:padding="5dp"/>
 
-                    <RelativeLayout
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-
-                        android:id="@+id/circle_bg_7"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/circle_7"
-                        android:src="@drawable/item_icon"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_check_white_24dp"
-                            android:visibility="gone"
-                            android:id="@+id/check_l_2"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    <RelativeLayout
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-
-                        android:id="@+id/circle_bg_8"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/circle_8"
-                        android:src="@drawable/item_icon_dark"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_check_white_24dp"
-                            android:id="@+id/check_l_3"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    <RelativeLayout
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-
-                        android:id="@+id/circle_bg_9"><ImageView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/circle_9"
-                        android:src="@drawable/item_icon_dark_1"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_check_white_24dp"
-                            android:visibility="gone"
-                            android:id="@+id/check_l_4"
-                            android:layout_centerInParent="true"/></RelativeLayout>
-                    />
-                </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/radioiPhone5"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/item_icon"
+                            android:button="@drawable/rbtn_selector_2"
+                            android:gravity="center"
+                            android:padding="5dp"/>
+                        <RadioButton
+                            android:id="@+id/radioiPhone4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/item_icon_dark"
+                            android:button="@drawable/rbtn_selector_2"
+                            android:gravity="center"
+                            android:padding="5dp" />
+                        <RadioButton
+                            android:id="@+id/radioiPhone3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/item_icon_dark_1"
+                            android:layout_marginLeft="20dp"
+                            android:button="@drawable/rbtn_selector_2"
+                            android:gravity="center"
+                            android:padding="5dp" />
+                    </RadioGroup>
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:layout_alignParentBottom="true"

@@ -116,14 +116,18 @@
             <RatingBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ratingBar"
-                style="?android:attr/ratingBarStyleIndicator"
-                android:scaleX="0.45"
-                android:scaleY="0.45"
+                android:id="@+id/ratingBar1"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:transformPivotX="0dp"
+                android:translationY="32dp"
+                android:translationX="8dp"
+                android:transformPivotY="0dp"
                 android:progressTint="@color/menu_light"
-                android:layout_marginLeft="32dp"
+                android:progressBackgroundTint="@color/activity_e_card_bg"
                 android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/item_icon" />
+                android:layout_toRightOf="@id/item_icon"
+                />
 
         </RelativeLayout>
 
@@ -204,13 +208,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/ratingBar2"
-                    style="?android:attr/ratingBarStyleIndicator"
-                    android:scaleX="0.45"
-                    android:scaleY="0.45"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:transformPivotX="0dp"
+                    android:translationY="32dp"
+                    android:translationX="8dp"
+                    android:transformPivotY="0dp"
                     android:progressTint="@color/menu_light"
-                    android:layout_marginLeft="32dp"
+                    android:progressBackgroundTint="@color/activity_e_card_bg"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/item_icon2" />
+                    android:layout_toRightOf="@id/item_icon2"
+                    />
         </RelativeLayout>
         </RelativeLayout>
 

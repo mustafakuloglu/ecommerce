@@ -38,6 +38,8 @@
         android:id="@+id/ratingBar_list"
         android:scaleX="0.4"
         android:scaleY="0.4"
+        android:progressTint="@color/menu_light"
+        android:progressBackgroundTint="@color/activity_e_card_bg"
         android:transformPivotY="0dp"
         android:transformPivotX="0dp"
         android:layout_marginTop="16dp"

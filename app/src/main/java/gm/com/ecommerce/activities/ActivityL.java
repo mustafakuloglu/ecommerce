@@ -11,16 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.ActivityLCommentAdapter;
 import gm.com.ecommerce.models.ModelL;
-import gm.com.ecommerce.utils.ViewClick;
+//import gm.com.ecommerce.utils.ViewClick;
 
 public class ActivityL extends AppCompatActivity {
     RecyclerView recycler_view;
     private List<ModelL> item_list;
-    private ViewClick viewClick;
+//    private ViewClick viewClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class ActivityL extends AppCompatActivity {
         BaseActivity baseActivity= new BaseActivity();
         baseActivity.drawerCreate(this,"Product");
         ButterKnife.bind(this);
-        viewClick = new ViewClick(this);
+//        viewClick = new ViewClick(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
 
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -70,40 +69,5 @@ public class ActivityL extends AppCompatActivity {
 
 
     }
-    @OnClick(R.id.a_l_1)
-    public void a1(){
-        viewClick.click(1);
-    }
-    @OnClick(R.id.a_l_2)
-    public void a2(){
-        viewClick.click(2);
-    }
-    @OnClick(R.id.a_l_3)
-    public void a3(){
-        viewClick.click(3);
-    }
-    @OnClick(R.id.a_l_4)
-    public void a4(){
-        viewClick.click(4);
-    }
-    @OnClick(R.id.a_l_5)
-    public void a5(){
-        viewClick.click(5);
-    }
-    @OnClick(R.id.circle_1)
-    public void circle_1(){
-        viewClick.click(6);
-    }
-    @OnClick(R.id.circle_2)
-    public void circle_2(){
-        viewClick.click(7);
-    }
-    @OnClick(R.id.circle_3)
-    public void circle_3(){
-        viewClick.click(8);
-    }
-    @OnClick(R.id.circle_4)
-    public void circle_4(){
-        viewClick.click(9);
-    }
+
 }

@@ -41,7 +41,7 @@ public class FragmantCadapter extends RecyclerView.Adapter<FragmantCadapter.View
             item_text = (TextView)view.findViewById(R.id.item_text);
             item_icon = (ImageView)view.findViewById(R.id.item_icon);
             item_price=(TextView)view.findViewById(R.id.item_price);
-            item_rating=(RatingBar)view.findViewById(R.id.ratingBar);
+            item_rating=(RatingBar)view.findViewById(R.id.ratingBar1);
             item_title2 = (TextView)view.findViewById(R.id.item_title2);
             item_text2= (TextView)view.findViewById(R.id.item_text2);
             item_icon2= (ImageView)view.findViewById(R.id.item_icon2);

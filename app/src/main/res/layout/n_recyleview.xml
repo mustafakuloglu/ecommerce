@@ -80,14 +80,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBarn"
-            style="?android:attr/ratingBarStyleIndicator"
-            android:scaleX="0.45"
-            android:scaleY="0.45"
-            android:layout_marginBottom="8dp"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:transformPivotX="0dp"
+            android:translationY="28dp"
+            android:translationX="0dp"
+            android:transformPivotY="0dp"
             android:progressTint="@color/menu_light"
-            android:layout_marginLeft="32dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/item_iconn"/>
+            android:layout_alignTop="@+id/item_menun"
+            android:layout_alignStart="@+id/item_textn" />
 
     </RelativeLayout>
 
