@@ -7,7 +7,6 @@ package gm.com.ecommerce.fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -47,17 +46,16 @@ public class FragmentB extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragmentb, container, false);
         recycler_view = (RecyclerView)view.findViewById(R.id.recycler_vie);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
 
-        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        layoutManager.scrollToPosition(0);
-        layoutManager.canScrollVertically();
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2,1);
 
         recycler_view.setLayoutManager(layoutManager);
         recycler_view.setAdapter(mAdapter);
+        recycler_view.setLayoutManager(layoutManager);
+        recycler_view.setAdapter(mAdapter);
         item_list = new ArrayList<PersonB>();
-        item_list.add(new PersonB("Product", "Lorem ipsum dolor sit amet consecteur adipiscing elit.","$100",R.drawable.icon,R.drawable.ic_shopping_basket_black_24dp1,R.drawable.ic_favorite_black_24dp,R.drawable.ic_more_vert_black_24dp));
-        item_list.add(new PersonB("Product", "Lorem ipsum dolor sit amet consecteur adipiscing elit.","$100",R.drawable.icon,R.drawable.ic_shopping_basket_black_24dp1,R.drawable.ic_favorite_black_24dp,R.drawable.ic_more_vert_black_24dp));
+        item_list.add(new PersonB("Product", "Lorem ipsum dolor sit amet consecteur adipiscing elit.","$100",R.drawable.icon1,R.drawable.ic_shopping_basket_black_24dp1,R.drawable.ic_favorite_black_24dp,R.drawable.ic_more_vert_black_24dp));
+        item_list.add(new PersonB("Product", "Lorem ipsum dolor sit amet consecteur adipiscing elit.","$100",R.drawable.icon1,R.drawable.ic_shopping_basket_black_24dp1,R.drawable.ic_favorite_black_24dp,R.drawable.ic_more_vert_black_24dp));
         FragmentBadapter adapter_items = new FragmentBadapter(item_list);
 
         recycler_view.setHasFixedSize(true);
@@ -108,3 +106,4 @@ public class FragmentB extends Fragment {
 
 
 }
+
