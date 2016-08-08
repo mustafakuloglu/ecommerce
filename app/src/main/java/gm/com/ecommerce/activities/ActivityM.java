@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.afollestad.materialdialogs.MaterialDialog;
+//import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,20 +40,20 @@ public class ActivityM extends AppCompatActivity {
         shop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
 
-        button = (Button) findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
-                        .title("Your Basket")
-                        .positiveText("OK")
-                        .customView(R.layout.activity_activity_m,false)
-                        .show();
-
-
-            }
-        });
+//        button = (Button) findViewById(R.id.button3);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
+//                        .title("Your Basket")
+//                        .positiveText("OK")
+//                        .customView(R.layout.activity_activity_m,false)
+//                        .show();
+//
+//
+//            }
+//        });
 
 
         mAdapter=new BasketAdapter(movieList);

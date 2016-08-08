@@ -205,7 +205,7 @@
 
                     <RadioGroup
                         android:layout_below="@id/variant_l"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:id="@+id/lin_2_l"
                         android:weightSum="1"
                         android:layout_marginBottom="2dp"
@@ -299,57 +299,65 @@
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/black_text"
                     />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/variant_2_l">
+    <RadioGroup
+        android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:id="@+id/lin_3_l"
+    android:weightSum="1"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="12dp"
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:id="@+id/lin_3_l"
-                        android:weightSum="1"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="64dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_below="@id/variant_2_l"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
-                        <RadioButton
-                            android:id="@+id/radioAndroid2"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:background="@drawable/item_icon_light_1"
-                            android:layout_marginLeft="20dp"
-                            android:button="@drawable/rbtn_selector_2"
-                            android:checked="true"
-                            android:gravity="center"
-                            android:padding="5dp"/>
+    <RadioButton
+        android:id="@+id/radioAndroid2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/item_icon_light_1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:button="@drawable/rbtn_selector_2"
+        android:checked="true"
+        android:gravity="center"
+        android:padding="5dp"/>
 
-                        <RadioButton
-                            android:id="@+id/radioiPhone5"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="20dp"
-                            android:background="@drawable/item_icon"
-                            android:button="@drawable/rbtn_selector_2"
-                            android:gravity="center"
-                            android:padding="5dp"/>
-                        <RadioButton
-                            android:id="@+id/radioiPhone4"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="20dp"
-                            android:background="@drawable/item_icon_dark"
-                            android:button="@drawable/rbtn_selector_2"
-                            android:gravity="center"
-                            android:padding="5dp" />
-                        <RadioButton
-                            android:id="@+id/radioiPhone3"
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:background="@drawable/item_icon_dark_1"
-                            android:layout_marginLeft="20dp"
-                            android:button="@drawable/rbtn_selector_2"
-                            android:gravity="center"
-                            android:padding="5dp" />
-                    </RadioGroup>
+    <RadioButton
+        android:id="@+id/radioiPhone5"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/item_icon"
+        android:button="@drawable/rbtn_selector_2"
+        android:gravity="center"
+        android:padding="5dp"/>
+    <RadioButton
+        android:id="@+id/radioiPhone4"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/item_icon_dark"
+        android:button="@drawable/rbtn_selector_2"
+        android:gravity="center"
+        android:padding="5dp" />
+    <RadioButton
+        android:id="@+id/radioiPhone3"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/item_icon_dark_1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:button="@drawable/rbtn_selector_2"
+        android:gravity="center"
+        android:padding="5dp" />
+</RadioGroup></RelativeLayout>
+
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:layout_alignParentBottom="true"

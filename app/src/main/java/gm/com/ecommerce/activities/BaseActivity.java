@@ -238,12 +238,9 @@ public class BaseActivity extends AppCompatActivity {
         if(id==15)
         { Intent main=new Intent(activity,ActivityL.class);
             activity.startActivity(main);}
-
         if(id==16)
         { Intent main=new Intent(activity,ActivityK.class);
             activity.startActivity(main);}
-
-
     }
 
 

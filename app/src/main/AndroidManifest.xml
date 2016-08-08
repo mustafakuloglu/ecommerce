@@ -50,7 +50,6 @@
             android:label="@string/title_activity_actvity_f"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activities.ActivityK" />
-        <activity android:name=".activities.SlidePagerActivity" />
     </application>
 
 </manifest>
