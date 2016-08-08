@@ -7,14 +7,24 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import gm.com.ecommerce.R;
+import gm.com.ecommerce.adapters.ActivityLCommentAdapter;
 import gm.com.ecommerce.fragments.FragmentK;
+import gm.com.ecommerce.models.ModelL;
 import me.relex.circleindicator.CircleIndicator;
 
 
 public class ActivityK extends AppCompatActivity {
     MyPagerAdapter adapterViewPager;
+    RecyclerView recycler_view;
+    private List<ModelL> item_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +42,30 @@ public class ActivityK extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             baseActivity.toolbar.setElevation( 0.1f);
         }
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.scrollToPosition(0);
+        recycler_view =(RecyclerView)findViewById(R.id.recycler_view_5);
+
+        recycler_view.setLayoutManager(layoutManager);
+        item_list = new ArrayList<ModelL>();
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt effiamet."));
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet."));
+        item_list.add(new ModelL(3,"by username","2 hours ago","Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit.  f"));
+
+        ActivityLCommentAdapter adapter_items=new ActivityLCommentAdapter(item_list);
+        recycler_view.setHasFixedSize(true);
+
+        recycler_view.setAdapter(adapter_items);
+
+        recycler_view.setItemAnimator(new DefaultItemAnimator());
+
+
+
+
+
     }
 
 
