@@ -7,7 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +26,8 @@ public class ActivityM extends AppCompatActivity {
     public RecyclerView recyclerView;
     public List<MovieBasket> movieList;
     public BasketAdapter mAdapter;
+    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,21 @@ public class ActivityM extends AppCompatActivity {
         baseActivity.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         shop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
+
+        button = (Button) findViewById(R.id.button3);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
+                        .title("Your Basket")
+                        .positiveText("OK")
+                        .customView(R.layout.activity_activity_m,false)
+                        .show();
+
+
+            }
+        });
 
 
         mAdapter=new BasketAdapter(movieList);
@@ -74,5 +94,6 @@ public class ActivityM extends AppCompatActivity {
                 return false;
             }
         });
-    }
-}
+
+
+}}
