@@ -47,6 +47,7 @@ public class FragmentD extends Fragment {
 
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2,1);
         recycler_view.setLayoutManager(layoutManager);
+
         recycler_view.setAdapter(mAdapter);
         item_list = new ArrayList<FragD>();
         item_list.add(new FragD("Product","$100",R.drawable.res1));

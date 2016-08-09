@@ -8,6 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
     android:background="@color/activity_e_bg"
     tools:context="gm.com.ecommerce.activities.MainActivity"
     android:focusableInTouchMode="true"
@@ -51,14 +52,12 @@
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_vie"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
             android:scrollbars="vertical"
-            android:layout_marginRight="5dp"
             android:fadeScrollbars="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/activity_e_bg"/>
+            android:layout_height="wrap_content"
+            android:background="@color/activity_e_bg"
+            android:layout_marginBottom="16dp"/>
 
     </RelativeLayout>
 
