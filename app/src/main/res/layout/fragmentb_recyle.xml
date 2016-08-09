@@ -2,50 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginRight="16dp"
+    >
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="260dp"
-            android:background="@color/md_white_1000"
-            >
+            android:layout_height="280dp"
+            android:background="@color/md_white_1000">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/icon"
-                android:src="@drawable/icon1"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_alignParentTop="true" />
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/icon1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:id="@+id/favo"
                 android:layout_marginRight="2dp"
                 android:src="@drawable/ic_favorite_black_24dp"
                 android:layout_alignTop="@+id/shopppin"
-                android:layout_toEndOf="@+id/shopppin" />
+                android:layout_toStartOf="@+id/navo" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:id="@+id/navo"
                 android:src="@drawable/ic_more_vert_black_24dp"
                 android:layout_alignTop="@+id/favo"
                 android:layout_alignEnd="@+id/icon" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:id="@+id/shopppin"
                 android:src="@drawable/ic_shopping_basket_black_24dp1"
                 android:layout_marginRight="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_alignBottom="@+id/dolar"
-                android:layout_toEndOf="@+id/dolar"
-                android:layout_marginStart="40dp" />
+                android:layout_toStartOf="@+id/favo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,7 +58,7 @@
                 android:textStyle="bold"
                 android:textColor="#fe7777"
                 android:layout_below="@+id/lorem"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
 
                />
@@ -71,10 +72,9 @@
                 android:id="@+id/lorem"
                 android:text="Lorem ipsum dolor sit amet consecteur adipiscing elit."
                 android:textColor="#a9adb2"
-                android:layout_below="@+id/urun"
                 android:layout_marginLeft="10dp"
-
-                />
+                android:layout_below="@+id/urun"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -82,6 +82,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="14sp"
                 android:id="@+id/urun"
+                android:text="Product"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/md_black_1000"
                 android:layout_below="@id/icon"
                 android:layout_marginLeft="10dp"
