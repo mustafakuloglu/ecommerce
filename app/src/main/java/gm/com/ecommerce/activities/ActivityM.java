@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-//import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,20 +40,40 @@ public class ActivityM extends AppCompatActivity {
         shop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
 
-//        button = (Button) findViewById(R.id.button3);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
-//                        .title("Your Basket")
-//                        .positiveText("OK")
-//                        .customView(R.layout.activity_activity_m,false)
-//                        .show();
-//
-//
-//            }
-//        });
+        button = (Button) findViewById(R.id.button3);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
+                        .title("Your Basket")
+                        .customView(R.layout.dialog_recyleview,true)
+                        .autoDismiss(false)
+                        .show();
+                Button button1;
+                button1 = (Button)dialog.findViewById(R.id.button3);
+
+                recyclerView= (RecyclerView) dialog.findViewById(R.id.recycler_view);
+                LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(layoutManager);
+                recyclerView.addItemDecoration(new DividerItemDecoration(ActivityM.this, LinearLayoutManager.VERTICAL));
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                recyclerView.setAdapter(mAdapter);
+
+                movieList =new ArrayList<MovieBasket>();
+                movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+                movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+                movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+                movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
+
+                BasketAdapter adapter_items = new BasketAdapter(movieList);
+
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setAdapter(mAdapter);
+                recyclerView.setAdapter(adapter_items);
+
+            }
+        });
 
 
         mAdapter=new BasketAdapter(movieList);

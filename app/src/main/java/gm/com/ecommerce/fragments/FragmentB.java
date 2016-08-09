@@ -69,12 +69,12 @@ public class FragmentB extends Fragment {
         recycler_view1.setAdapter(mAdapter1);
 
         item_list1 = new ArrayList<PersonB2>();
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
-        item_list1.add(new PersonB2("Product", "$100",R.drawable.icon,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
+        item_list1.add(new PersonB2("Product", "$100",R.drawable.iconsa,R.drawable.ic_more_vert_black_24dp));
         FragmentB2adapter adapter_items1 = new FragmentB2adapter(item_list1);
 
        recycler_view1.setHasFixedSize(true);

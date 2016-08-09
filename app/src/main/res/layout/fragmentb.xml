@@ -47,11 +47,13 @@
           />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_vie"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="40dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
             android:layout_centerHorizontal="true"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/activity_e_bg"/>
 
     </RelativeLayout>
@@ -87,11 +89,12 @@
             android:layout_alignStart="@+id/top_rel" />
         <android.support.v7.widget.RecyclerView
             android:layout_marginTop="40dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
             android:id="@+id/recycler_view1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 

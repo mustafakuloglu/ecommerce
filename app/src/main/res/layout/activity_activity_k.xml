@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@id/tool_bar"
+    android:id="@+id/scroll">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="gm.com.ecommerce.activities.ActivityK"
+    android:background="@color/activity_e_bg"
     android:orientation="horizontal">
     <include
         android:id="@+id/tool_bar"
@@ -12,6 +18,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="264dp"
+        android:id="@+id/header"
     tools:context="gm.com.ecommerce.activities.ActivityK">
 
     <android.support.v4.view.ViewPager
@@ -27,4 +34,296 @@
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_white_1000"
+        android:layout_below="@id/header">
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar_l"
+            android:transformPivotY="0dp"
+            android:progressTint="@color/menu_light"
+            android:transformPivotX="0dp"
+            android:scaleX="0.4"
+            android:layout_marginLeft="8dp"
+            android:rating="4"
+            android:progressBackgroundTint="@color/activity_e_card_bg"
+            android:layout_marginTop="40dp"
+            android:scaleY="0.4"
+            android:layout_below="@+id/lin_l"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="46 reviews"
+            android:id="@+id/review_l"
+            android:layout_marginEnd="73dp"
+            android:layout_alignTop="@+id/ratingBar_l"
+            android:layout_alignEnd="@+id/ratingBar_l" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Product"
+            android:id="@+id/textView17"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/ratingBar_l" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100"
+            android:id="@+id/price_l"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/button_red"
+            android:layout_alignTop="@+id/textView17"
+            android:layout_alignEnd="@+id/info_l" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt effiamet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt efficitur. Praesent viverra, ligula ac bibendum varius."
+            android:id="@+id/info_l"
+            android:textColor="@color/menu_light"
+            android:layout_below="@id/review_l"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            />
+        <View
+            android:layout_below="@id/info_l"
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/activity_e_card_bg"
+            android:id="@+id/line_1_l"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Variants"
+            android:id="@+id/variant_l"
+            android:layout_below="@id/line_1_l"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black_text"
+            />
+
+        <RadioGroup
+            android:layout_below="@id/variant_l"
+            android:layout_width="fill_parent"
+            android:id="@+id/lin_2_l"
+            android:weightSum="1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioAndroid"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:textStyle="bold"
+                android:background="@drawable/rbtn_selector"
+                android:layout_marginLeft="16dp"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="A"
+                android:textColor="@drawable/rbtn_textcolor_selector" />
+
+            <RadioButton
+                android:id="@+id/radioiPhone"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="B"
+                android:textColor="@drawable/rbtn_textcolor_selector" />
+            <RadioButton
+                android:id="@+id/radioiPhone1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="C"
+                android:textColor="@drawable/rbtn_textcolor_selector" />
+            <RadioButton
+                android:id="@+id/radioiPhone2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rbtn_selector"
+                android:layout_marginLeft="16dp"
+                android:button="@null"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="D"
+                android:textColor="@drawable/rbtn_textcolor_selector" />
+
+            <RadioButton
+                android:id="@+id/radioWindows"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="E"
+                android:textStyle="bold"
+                android:textColor="@drawable/rbtn_textcolor_selector" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_below="@id/lin_2_l"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/activity_e_card_bg"
+            android:id="@+id/line_2_l"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Variants"
+            android:id="@+id/variant_2_l"
+            android:layout_below="@id/line_2_l"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black_text"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:layout_below="@id/variant_2_l"
+            android:id="@+id/radio1"
+            >
+            <RadioGroup
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/lin_3_l"
+                android:weightSum="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="12dp"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioAndroid2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/item_icon_light_1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:button="@drawable/rbtn_selector_2"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/radioiPhone5"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/item_icon"
+                    android:button="@drawable/rbtn_selector_2"
+                    android:gravity="center"
+                    android:padding="5dp"/>
+                <RadioButton
+                    android:id="@+id/radioiPhone4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/item_icon_dark"
+                    android:button="@drawable/rbtn_selector_2"
+                    android:gravity="center"
+                    android:padding="5dp" />
+                <RadioButton
+                    android:id="@+id/radioiPhone3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/item_icon_dark_1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:button="@drawable/rbtn_selector_2"
+                    android:gravity="center"
+                    android:padding="5dp" />
+            </RadioGroup></RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:layout_below="@+id/radio1"
+    android:id="@+id/ortabutton">
+
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="ADD TO FAVORITES"
+        android:textColor="#FFF"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/button4" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="ADD TO BASKET"
+        android:textColor="#FFF"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="#ff5252"
+        android:id="@+id/button5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_white_1000"
+
+        android:layout_below="@+id/ortabutton"
+        android:layout_alignStart="@+id/info_l" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/recycler_view_5"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="10dp">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
