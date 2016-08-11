@@ -29,12 +29,13 @@ import gm.com.ecommerce.R;
 import gm.com.ecommerce.fragments.onefragment;
 import gm.com.ecommerce.fragments.threefragment;
 import gm.com.ecommerce.fragments.twofragment;
+import gm.com.ecommerce.user.ActivityJ;
 
 public class BaseActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    Toolbar toolbar;
+    public Toolbar toolbar;
     Activity activity=new Activity();
     int id= 0;
 

@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ActivityJ"
+    tools:context=".user.ActivityJ"
     android:background="@color/md_white_1000">
     <include
         android:id="@+id/tool_bar"
