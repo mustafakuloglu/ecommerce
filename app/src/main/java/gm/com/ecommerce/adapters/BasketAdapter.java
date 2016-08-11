@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.models.MovieBasket;
+import gm.com.ecommerce.checkout.MovieBasket;
 
 /**
  * Created by Comert on 1.08.2016.

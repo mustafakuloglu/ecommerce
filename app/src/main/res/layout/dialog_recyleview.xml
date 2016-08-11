@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/md_white_1000"
-        tools:context=".activities.ActivityM">
+        tools:context=".checkout.ActivityM">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="30dp"
             android:layout_alignTop="@+id/textView10"
-            android:layout_alignEnd="@+id/button3" />
+            android:layout_alignEnd="@+id/checkout" />
 
 
 
@@ -65,13 +65,13 @@
             android:textStyle="bold"
             android:textColor="#8d9299"
             android:layout_marginLeft="18dp"
-            android:layout_marginTop="300dp" />
+            android:layout_marginTop="340dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="PROCEED TO CHECKOUT"
-            android:id="@+id/button3"
+            android:id="@+id/checkout"
             android:background="#ff5252"
             android:textColor="#FFF"
             android:layout_marginLeft="16dp"

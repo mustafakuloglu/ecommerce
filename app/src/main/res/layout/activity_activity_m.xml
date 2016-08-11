@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/md_white_1000"
-    tools:context=".activities.ActivityM">
+    tools:context=".checkout.ActivityM">
     <include
         android:id="@+id/tool_bar"
         layout="@layout/actiontool_bar" />
@@ -21,10 +21,10 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:scrollbars="vertical"
-            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
 
       </RelativeLayout>
     <TextView
@@ -67,7 +67,7 @@
         android:textStyle="bold"
         android:textColor="#8d9299"
          android:layout_marginLeft="18dp"
-        android:layout_marginTop="360dp" />
+        android:layout_marginTop="400dp" />
 
     <Button
         android:layout_width="match_parent"

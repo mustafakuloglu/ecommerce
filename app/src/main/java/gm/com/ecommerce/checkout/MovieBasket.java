@@ -1,4 +1,4 @@
-package gm.com.ecommerce.models;
+package gm.com.ecommerce.checkout;
 
 import java.util.List;
 

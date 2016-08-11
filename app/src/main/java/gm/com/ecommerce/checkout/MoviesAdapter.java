@@ -1,4 +1,4 @@
-package gm.com.ecommerce.adapters;
+package gm.com.ecommerce.checkout;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

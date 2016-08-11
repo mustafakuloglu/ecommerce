@@ -33,7 +33,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activities.ActivityC" />
         <activity
-            android:name=".activities.ActivityM"
+            android:name=".checkout.ActivityM"
             android:label="@string/title_activity_category"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activities.ActivityN" />

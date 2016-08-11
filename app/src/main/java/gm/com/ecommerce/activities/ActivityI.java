@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.adapters.MoviesAdapter;
+import gm.com.ecommerce.checkout.MoviesAdapter;
 import gm.com.ecommerce.models.Movie;
 import gm.com.ecommerce.utils.DividerItemDecoration;
 
