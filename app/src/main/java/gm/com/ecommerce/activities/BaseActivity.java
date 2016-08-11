@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gm.com.ecommerce.R;
+import gm.com.ecommerce.screenA.ActivityA;
 import gm.com.ecommerce.checkout.ActivityM;
 import gm.com.ecommerce.fragments.onefragment;
 import gm.com.ecommerce.fragments.threefragment;
@@ -202,7 +203,7 @@ public class BaseActivity extends AppCompatActivity {
 
                 .build();
     }
-    private void startScreen()
+    public void startScreen()
     {
         if(id==4)
         { Intent main=new Intent(activity,ActivityE.class);

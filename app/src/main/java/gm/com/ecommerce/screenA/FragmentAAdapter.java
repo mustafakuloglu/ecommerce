@@ -1,5 +1,6 @@
-package gm.com.ecommerce.adapters;
+package gm.com.ecommerce.screenA;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,21 +11,24 @@ import android.widget.TextView;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.models.ItemA;
 
 /**
  * Created by musta on 2.08.2016.
  */
 public class FragmentAAdapter extends RecyclerView.Adapter<FragmentAAdapter.ViewHolder> {
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    private Activity activity;
+    private IScreenAView screenAView;
+    private IScreenAPresenter screenAPresenter;
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView price;
         public TextView title;
         public ImageView photo;
 
 
+
         public ViewHolder(View view) {
             super(view);
-
+final FragmentAAdapter fragmentAAdapter=FragmentAAdapter.this;
             title = (TextView)view.findViewById(R.id.title_a);
             price = (TextView)view.findViewById(R.id.price_a);
             photo = (ImageView)view.findViewById(R.id.photo_a);
@@ -32,8 +36,11 @@ public class FragmentAAdapter extends RecyclerView.Adapter<FragmentAAdapter.View
         }
     }
     List<ItemA> list_person;
-    public FragmentAAdapter(List<ItemA> list_person) {
+    public FragmentAAdapter(List<ItemA> list_person, Activity activity,IScreenAView screenAView) {
+this.activity=activity;
 
+        this.screenAView=screenAView;
+        screenAPresenter=new ScreenAPresenter(this.screenAView);
         this.list_person = list_person;
     }
 
@@ -54,7 +61,12 @@ public class FragmentAAdapter extends RecyclerView.Adapter<FragmentAAdapter.View
         holder.title.setText(list_person.get(position).getTitle());
         holder.price.setText(list_person.get(position).getPrice());
         holder.photo.setImageResource(list_person.get(position).getPhoto_id());
-
+holder.photo.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        screenAPresenter.onitemSelect();
+    }
+});
     }
 
     @Override

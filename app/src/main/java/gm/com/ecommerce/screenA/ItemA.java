@@ -1,4 +1,4 @@
-package gm.com.ecommerce.models;
+package gm.com.ecommerce.screenA;
 
 /**
  * Created by musta on 1.08.2016.

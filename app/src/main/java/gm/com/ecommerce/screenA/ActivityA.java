@@ -1,9 +1,9 @@
-package gm.com.ecommerce.activities;
+package gm.com.ecommerce.screenA;
 
 import android.os.Bundle;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.fragments.FragmentA;
+import gm.com.ecommerce.activities.BaseActivity;
 
 public class ActivityA extends BaseActivity {
 

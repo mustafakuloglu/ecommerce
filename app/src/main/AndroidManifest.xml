@@ -37,7 +37,7 @@
             android:label="@string/title_activity_category"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activities.ActivityN" />
-        <activity android:name=".activities.ActivityA" />
+        <activity android:name=".screenA.ActivityA" />
         <activity android:name=".activities.ActivityB" />
         <activity android:name=".activities.ActivityG" />
         <activity android:name=".activities.ActivityL" />
