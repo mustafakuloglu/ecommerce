@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gm.com.ecommerce.activities.ActivityK"
+    tools:context=".ScreenK.ActivityK"
     android:background="@color/activity_e_bg"
     android:orientation="horizontal">
     <include
@@ -19,7 +19,7 @@
     android:layout_width="match_parent"
     android:layout_height="264dp"
         android:id="@+id/header"
-    tools:context="gm.com.ecommerce.activities.ActivityK">
+    tools:context=".ScreenK.ActivityK">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vpPager"
@@ -124,7 +124,7 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioAndroid"
+                android:id="@+id/radiobutonA"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:textStyle="bold"
@@ -138,7 +138,7 @@
                 android:textColor="@drawable/rbtn_textcolor_selector" />
 
             <RadioButton
-                android:id="@+id/radioiPhone"
+                android:id="@+id/radiobutonB"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:textStyle="bold"
@@ -150,7 +150,7 @@
                 android:text="B"
                 android:textColor="@drawable/rbtn_textcolor_selector" />
             <RadioButton
-                android:id="@+id/radioiPhone1"
+                android:id="@+id/radiobutonC"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginLeft="16dp"
@@ -162,7 +162,7 @@
                 android:text="C"
                 android:textColor="@drawable/rbtn_textcolor_selector" />
             <RadioButton
-                android:id="@+id/radioiPhone2"
+                android:id="@+id/radiobutonD"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:background="@drawable/rbtn_selector"
@@ -175,7 +175,7 @@
                 android:textColor="@drawable/rbtn_textcolor_selector" />
 
             <RadioButton
-                android:id="@+id/radioWindows"
+                android:id="@+id/radiobutonE"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginLeft="16dp"
@@ -227,7 +227,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioAndroid2"
+                    android:id="@+id/lightgray"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/item_icon_light_1"
@@ -239,7 +239,7 @@
                     android:padding="5dp"/>
 
                 <RadioButton
-                    android:id="@+id/radioiPhone5"
+                    android:id="@+id/gray"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="8dp"
@@ -249,7 +249,7 @@
                     android:gravity="center"
                     android:padding="5dp"/>
                 <RadioButton
-                    android:id="@+id/radioiPhone4"
+                    android:id="@+id/lightdarkgray"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="8dp"
@@ -259,7 +259,7 @@
                     android:gravity="center"
                     android:padding="5dp" />
                 <RadioButton
-                    android:id="@+id/radioiPhone3"
+                    android:id="@+id/darkgray"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="@drawable/item_icon_dark_1"
@@ -287,7 +287,7 @@
         android:background="@color/colorPrimaryDark"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
-        android:id="@+id/button4" />
+        android:id="@+id/activityk_favorite" />
 
     <Button
         android:layout_width="175dp"
@@ -296,7 +296,7 @@
         android:textColor="#FFF"
         android:layout_marginRight="20dp"
         android:background="#ff5252"
-        android:id="@+id/button5"
+        android:id="@+id/activityk_basket"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
@@ -331,7 +331,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginTop="1dp"
-        android:id="@+id/button6"
+        android:id="@+id/activityk_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -18,7 +18,7 @@ public class CheckoutPresenter implements ICheckoutPresenter,ICheckoutListener {
 
     @Override
     public void onPopup() {
-
+interactor.onPopup();
     }
 
 }
