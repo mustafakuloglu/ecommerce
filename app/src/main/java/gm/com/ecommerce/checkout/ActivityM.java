@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -46,7 +45,7 @@ public class ActivityM extends AppCompatActivity implements ICheckoutView,View.O
 
 
 
-        mAdapter=new BasketAdapter(movieList);
+        mAdapter=new BasketAdapter(checkoutPresenter.moviebasket());
         recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -54,21 +53,14 @@ public class ActivityM extends AppCompatActivity implements ICheckoutView,View.O
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
-        movieList =new ArrayList<MovieBasket>();
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-        movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-
-        BasketAdapter adapter_items = new BasketAdapter(movieList);
-
+        BasketAdapter adapter_items = new BasketAdapter(checkoutPresenter.moviebasket());
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(mAdapter);
         recyclerView.setAdapter(adapter_items);
         recyclerView.setItemAnimator(new DefaultItemAnimator());}
 
     @Override
-    public void onPopup() {
+    public void Popup() {
 
         final MaterialDialog dialog = new MaterialDialog.Builder(ActivityM.this)
                     .title("Your Basket")
@@ -82,12 +74,7 @@ public class ActivityM extends AppCompatActivity implements ICheckoutView,View.O
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setAdapter(mAdapter);
 
-            movieList =new ArrayList<MovieBasket>();
-            movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-            movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-            movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-            movieList.add(new MovieBasket("Product","$100","1",R.drawable.cloud,R.drawable.ic_expand_more_black_24dp,R.drawable.ic_expand_less_black_24dp));
-            BasketAdapter adapter_items = new BasketAdapter(movieList);
+            BasketAdapter adapter_items = new BasketAdapter(checkoutPresenter.moviebasket());
 
             recyclerView.setHasFixedSize(true);
             recyclerView.setAdapter(mAdapter);
@@ -101,7 +88,7 @@ public class ActivityM extends AppCompatActivity implements ICheckoutView,View.O
                 public void run() {
                     Toast.makeText(ActivityM.this, "Alışveriş Tamamlandı", Toast.LENGTH_LONG).show();
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -120,7 +107,7 @@ public class ActivityM extends AppCompatActivity implements ICheckoutView,View.O
     public void onClick(View view) {
        if (view.getId() == R.id.button3)
         {
-            onPopup();
+            Popup();
         }
 
     }

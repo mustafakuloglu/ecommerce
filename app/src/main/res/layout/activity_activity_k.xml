@@ -280,7 +280,7 @@
 
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="ADD TO FAVORITES"
         android:textColor="#FFF"
@@ -290,7 +290,7 @@
         android:id="@+id/activityk_favorite" />
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="ADD TO BASKET"
         android:textColor="#FFF"

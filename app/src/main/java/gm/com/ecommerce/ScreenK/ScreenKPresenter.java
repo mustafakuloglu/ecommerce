@@ -1,45 +1,35 @@
 package gm.com.ecommerce.ScreenK;
 
+import java.util.ArrayList;
+
+import gm.com.ecommerce.models.ModelL;
+
 /**
  * Created by Comert on 11.08.2016.
  */
 
-public class ScreenKPresenter implements IScreenKPresenter ,IScreenKListener{
+public class ScreenKPresenter implements IScreenKPresenter{
     IScreenKView view;
-    IScreenKInteractor interactor;
     public ScreenKPresenter(IScreenKView view) {
         this.view=view;
-        this.interactor = new ScreenKInteractorImpl();
-        this.interactor.setScreenKListener(this);
     }
 
     @Override
-    public void addbasketlist(String variants, String color) {
-
+    public void Basketlist(int variants, int color) {
     }
 
     @Override
-    public void addfavoritelist(String variants, String color) {
-
-    }
-
-    @Override
-    public void onaddbasket() {
+    public void Favoritelist(int variants, int color) {
 
     }
 
     @Override
-    public void onaddfavorite() {
+    public ArrayList<ModelL> modelL() {
+        ArrayList<ModelL>modelL=new ArrayList<>();
+        modelL.add(new ModelL(3, "by username", "2 hours ago", "Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nunc vel dolor tincidunt effiamet."));
+        modelL.add(new ModelL(3, "by username", "2 hours ago", "Lorem ipsum dolor sit orem ipsum dolor sit amet."));
+        modelL.add(new ModelL(3, "by username", "2 hours ago", "Lorem ipsum dolor sit orem ipsum dolor sit amet, consectetur adipiscing elit.  f"));
 
-    }
-
-    @Override
-    public void onviewall() {
-
-    }
-
-    @Override
-    public void setScreenKListener(IScreenKListener screenKListener) {
-
+        return modelL;
     }
 }
