@@ -32,6 +32,7 @@ import gm.com.ecommerce.checkout.ActivityM;
 import gm.com.ecommerce.fragments.onefragment;
 import gm.com.ecommerce.fragments.threefragment;
 import gm.com.ecommerce.fragments.twofragment;
+import gm.com.ecommerce.screenB.ActivityB;
 import gm.com.ecommerce.user.ActivityJ;
 
 public class BaseActivity extends AppCompatActivity {

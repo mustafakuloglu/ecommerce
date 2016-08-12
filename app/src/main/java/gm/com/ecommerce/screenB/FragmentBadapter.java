@@ -1,4 +1,4 @@
-package gm.com.ecommerce.adapters;
+package gm.com.ecommerce.screenB;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.models.PersonB;
 
 
 public class FragmentBadapter extends RecyclerView.Adapter<FragmentBadapter.ViewHolder> {

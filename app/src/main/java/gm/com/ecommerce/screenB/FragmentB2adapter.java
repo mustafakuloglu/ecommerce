@@ -1,4 +1,4 @@
-package gm.com.ecommerce.adapters;
+package gm.com.ecommerce.screenB;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,14 +10,13 @@ import android.widget.TextView;
 import java.util.List;
 
 import gm.com.ecommerce.R;
-import gm.com.ecommerce.models.PersonB2;
 
 /**
  * Created by Comert on 2.08.2016.
  */
 public class FragmentB2adapter extends RecyclerView.Adapter<FragmentB2adapter.ViewHolder> {
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    private static ClickListener clickListener;
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView pro;
         public TextView dolars;
@@ -31,7 +30,13 @@ public class FragmentB2adapter extends RecyclerView.Adapter<FragmentB2adapter.Vi
             dolars = (TextView) view.findViewById(R.id.dolars);
             icons = (ImageView) view.findViewById(R.id.icons);
             navos = (ImageView) view.findViewById(R.id.navos);
+            view.setOnClickListener(this);
+            navos.setOnClickListener(this);
+        }
 
+        @Override
+        public void onClick(View view) {
+            clickListener.onItemClick(getAdapterPosition(), view);
         }
     }
 
@@ -65,6 +70,17 @@ public class FragmentB2adapter extends RecyclerView.Adapter<FragmentB2adapter.Vi
     @Override
     public int getItemCount() {
         return list_movie.size();
+    }  @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+        void onItemLongClick(int position, View v);
     }
 
 

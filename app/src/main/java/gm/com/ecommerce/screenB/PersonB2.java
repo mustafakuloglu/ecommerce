@@ -1,4 +1,4 @@
-package gm.com.ecommerce.models;
+package gm.com.ecommerce.screenB;
 
 import java.util.List;
 

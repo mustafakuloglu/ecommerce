@@ -14,7 +14,7 @@ import java.util.List;
 
 import gm.com.ecommerce.R;
 import gm.com.ecommerce.adapters.FragdAdapter;
-import gm.com.ecommerce.adapters.FragmentBadapter;
+import gm.com.ecommerce.screenB.FragmentBadapter;
 import gm.com.ecommerce.models.FragD;
 
 /**
