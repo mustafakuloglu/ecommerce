@@ -17,30 +17,40 @@ import gm.com.ecommerce.R;
  */
 public class FragmentAAdapter extends RecyclerView.Adapter<FragmentAAdapter.ViewHolder> {
     private Activity activity;
-    private IScreenAView screenAView;
-    private IScreenAPresenter screenAPresenter;
-    public class ViewHolder extends RecyclerView.ViewHolder {
+
+    private static ClickListener clickListener;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView price;
         public TextView title;
         public ImageView photo;
+        public ImageView more;
 
 
 
         public ViewHolder(View view) {
             super(view);
-final FragmentAAdapter fragmentAAdapter=FragmentAAdapter.this;
+
+            final FragmentAAdapter fragmentAAdapter=FragmentAAdapter.this;
             title = (TextView)view.findViewById(R.id.title_a);
             price = (TextView)view.findViewById(R.id.price_a);
             photo = (ImageView)view.findViewById(R.id.photo_a);
+            more = (ImageView)view.findViewById(R.id.imageView_a);
 
+            view.setOnClickListener(this);
+
+            more.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            clickListener.onItemClick(getAdapterPosition(), view);
         }
     }
     List<ItemA> list_person;
     public FragmentAAdapter(List<ItemA> list_person, Activity activity,IScreenAView screenAView) {
 this.activity=activity;
 
-        this.screenAView=screenAView;
-        screenAPresenter=new ScreenAPresenter(this.screenAView);
+
         this.list_person = list_person;
     }
 
@@ -61,12 +71,7 @@ this.activity=activity;
         holder.title.setText(list_person.get(position).getTitle());
         holder.price.setText(list_person.get(position).getPrice());
         holder.photo.setImageResource(list_person.get(position).getPhoto_id());
-holder.photo.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        screenAPresenter.onitemSelect();
-    }
-});
+
     }
 
     @Override
@@ -78,6 +83,12 @@ holder.photo.setOnClickListener(new View.OnClickListener() {
         super.onAttachedToRecyclerView(recyclerView);
     }
 
-
+    public void setOnItemClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+        void onItemLongClick(int position, View v);
+    }
 
 }

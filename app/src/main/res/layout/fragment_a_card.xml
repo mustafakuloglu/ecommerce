@@ -20,12 +20,11 @@
                 android:layout_height="match_parent"
                 android:id="@+id/photo_bg_a"
                 android:background="@color/activity_e_card_bg"
-                android:layout_above="@id/imageView3"
-                android:layout_marginBottom="18dp"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
                 android:layout_marginTop="6dp"
-                />
+                android:layout_marginBottom="16dp"
+                android:layout_above="@+id/imageView_a" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_more_vert_black_24dp"
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView_a"
+                android:clickable="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="21dp"
