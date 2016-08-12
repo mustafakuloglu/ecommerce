@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -56,6 +58,16 @@ adapter_items.setOnItemClickListener(new FragmentAAdapter.ClickListener() {
         ImageView im=(ImageView)view.findViewById(R.id.imageView_a);
         if(im.getId()==v.getId())
         {
+            PopupMenu pop = new PopupMenu(getActivity(),im);
+            pop.getMenuInflater().inflate(R.menu.popup_menu,pop.getMenu());
+
+            pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                public boolean onMenuItemClick(MenuItem item) {
+                    Toast.makeText(getActivity(),"You Clicked : " + item.getTitle(),Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                });
+            pop.show();
             Toast.makeText(getActivity(), "dfvs", Toast.LENGTH_SHORT).show();
         }
         else
